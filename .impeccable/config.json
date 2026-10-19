@@ -50,6 +50,15 @@
         ],
         "createdAt": "2026-10-19T05:36:54.185Z",
         "reason": "committed world: dry joint-compound white is the page ground (direction contract)"
+      },
+      {
+        "rule": "flat-type-hierarchy",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T05:47:02.793Z",
+        "reason": "detector counts only 14-24px UI sizes; hierarchy is carried by 48-96px uppercase display headings (phone screenshots reviewed)"
       }
     ]
   }

@@ -1,0 +1,616 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T05:50:30+00:00",
+  "title": "Design System: Green Mountain Renovations",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Deep Logo Green",
+        "canonical": "oklch(33.3% 0.062 163.3)",
+        "tonalRamp": [
+          "#001204",
+          "#002e1c",
+          "#1d4c39",
+          "#3e6c57",
+          "#5f8e78",
+          "#81b29a",
+          "#a5d6be",
+          "#cafce3"
+        ]
+      },
+      "green-950": {
+        "role": "primary",
+        "displayName": "Night Green",
+        "canonical": "oklch(25.6% 0.046 164.0)",
+        "tonalRamp": [
+          "#001106",
+          "#0a2c1f",
+          "#294a3b",
+          "#486a5a",
+          "#698b7b",
+          "#8baf9d",
+          "#aed3c1",
+          "#d3f9e6"
+        ]
+      },
+      "green-700": {
+        "role": "primary",
+        "displayName": "Lit Green",
+        "canonical": "oklch(42.0% 0.078 162.4)",
+        "tonalRamp": [
+          "#001204",
+          "#003019",
+          "#094f35",
+          "#326f54",
+          "#549174",
+          "#77b596",
+          "#9bdaba",
+          "#cafce2"
+        ]
+      },
+      "gold": {
+        "role": "secondary",
+        "displayName": "Taping-Knife Gold",
+        "canonical": "oklch(77.1% 0.139 84.1)",
+        "tonalRamp": [
+          "#170700",
+          "#372000",
+          "#593c00",
+          "#7f5a00",
+          "#a27c23",
+          "#c1a05c",
+          "#e1c58e",
+          "#ffecbf"
+        ]
+      },
+      "gold-deep": {
+        "role": "secondary",
+        "displayName": "Knife Gold Deep",
+        "canonical": "oklch(60.4% 0.118 77.6)",
+        "tonalRamp": [
+          "#190600",
+          "#391e00",
+          "#5d3900",
+          "#845700",
+          "#a77926",
+          "#c69d5d",
+          "#e6c38f",
+          "#ffeac0"
+        ]
+      },
+      "gold-bright": {
+        "role": "secondary",
+        "displayName": "Bright Knife Gold",
+        "canonical": "oklch(81.9% 0.136 86.0)",
+        "tonalRamp": [
+          "#160700",
+          "#362100",
+          "#583d00",
+          "#7d5b00",
+          "#a07d23",
+          "#c0a15c",
+          "#e0c68e",
+          "#ffecbf"
+        ]
+      },
+      "mud": {
+        "role": "neutral",
+        "displayName": "Dry Mud",
+        "canonical": "oklch(95.5% 0.005 95.1)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262522",
+          "#43423f",
+          "#62615e",
+          "#83827f",
+          "#a6a5a1",
+          "#cac9c5",
+          "#efeeea"
+        ]
+      },
+      "board": {
+        "role": "neutral",
+        "displayName": "Drywall Paper",
+        "canonical": "oklch(84.7% 0.021 84.6)",
+        "tonalRamp": [
+          "#0f0a03",
+          "#2a241a",
+          "#474136",
+          "#676154",
+          "#888275",
+          "#aba497",
+          "#cfc8ba",
+          "#f5eedf"
+        ]
+      },
+      "joint-tape": {
+        "role": "neutral",
+        "displayName": "Joint Tape",
+        "canonical": "oklch(92.3% 0.024 88.2)",
+        "tonalRamp": [
+          "#0f0a02",
+          "#2a2518",
+          "#474134",
+          "#676152",
+          "#888272",
+          "#aba594",
+          "#cfc9b8",
+          "#f5eedd"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Wall Ink",
+        "canonical": "oklch(25.5% 0.027 163.3)",
+        "tonalRamp": [
+          "#020f08",
+          "#182921",
+          "#35473e",
+          "#53665d",
+          "#74887e",
+          "#96aba0",
+          "#bacfc4",
+          "#dff5e9"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "oklch(40.8% 0.029 161.8)",
+        "tonalRamp": [
+          "#010f07",
+          "#182a21",
+          "#34473d",
+          "#53675c",
+          "#73887d",
+          "#96ab9f",
+          "#b9cfc3",
+          "#def5e8"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "oklch(95.8% 0.018 89.4)",
+        "tonalRamp": [
+          "#0e0b04",
+          "#28251b",
+          "#464237",
+          "#656156",
+          "#878276",
+          "#a9a599",
+          "#cec9bc",
+          "#f3eee1"
+        ]
+      },
+      "cream-soft": {
+        "role": "neutral",
+        "displayName": "Cream Soft",
+        "canonical": "oklch(90.5% 0.033 95.4)",
+        "tonalRamp": [
+          "#0f0b00",
+          "#2a2512",
+          "#47422e",
+          "#67614c",
+          "#88836d",
+          "#aba58f",
+          "#cfc9b2",
+          "#f5efd7"
+        ]
+      },
+      "fresh-coat": {
+        "role": "neutral",
+        "displayName": "Fresh Coat",
+        "canonical": "oklch(99.4% 0.007 88.6)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262521",
+          "#43423e",
+          "#63615d",
+          "#84827e",
+          "#a7a5a0",
+          "#cbc9c4",
+          "#f0eee9"
+        ]
+      },
+      "seam-line": {
+        "role": "neutral",
+        "displayName": "Seam Line",
+        "canonical": "oklch(87.7% 0.023 87.2)",
+        "tonalRamp": [
+          "#0f0a02",
+          "#2a2418",
+          "#474134",
+          "#676153",
+          "#888273",
+          "#aba495",
+          "#cfc9b9",
+          "#f5eede"
+        ]
+      },
+      "field-edge": {
+        "role": "neutral",
+        "displayName": "Field Edge",
+        "canonical": "oklch(60.2% 0.036 87.3)",
+        "tonalRamp": [
+          "#110a00",
+          "#2c2410",
+          "#4a412c",
+          "#6a604a",
+          "#8b816a",
+          "#afa48c",
+          "#d3c8b0",
+          "#f9eed4"
+        ]
+      },
+      "arrow-disc": {
+        "role": "neutral",
+        "displayName": "Arrow Disc",
+        "canonical": "oklch(90.5% 0.023 87.2)",
+        "tonalRamp": [
+          "#0f0a02",
+          "#2a2418",
+          "#474134",
+          "#676153",
+          "#888273",
+          "#aba495",
+          "#cfc9b9",
+          "#f5eede"
+        ]
+      },
+      "seal-white": {
+        "role": "neutral",
+        "displayName": "Seal White",
+        "canonical": "oklch(100.0% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "error-ink": {
+        "role": "error",
+        "displayName": "Error Ink",
+        "canonical": "oklch(46.3% 0.150 31.3)",
+        "tonalRamp": [
+          "#1f0000",
+          "#44120a",
+          "#6c2b20",
+          "#964538",
+          "#bc6758",
+          "#da8e80",
+          "#f8b7aa",
+          "#ffe0d5"
+        ]
+      },
+      "error-edge": {
+        "role": "error",
+        "displayName": "Error Edge",
+        "canonical": "oklch(53.1% 0.153 32.6)",
+        "tonalRamp": [
+          "#1f0000",
+          "#441209",
+          "#6c2b1f",
+          "#964636",
+          "#bc6756",
+          "#da8f7f",
+          "#f8b7a9",
+          "#ffe0d4"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; second phrase in gold."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One h2 per section."
+      },
+      "title-row": {
+        "displayName": "Title Row",
+        "purpose": "Service rows set as large uppercase type."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Step headings and the sent-panel heading."
+      },
+      "statement": {
+        "displayName": "Statement",
+        "purpose": "A single gold sentence on green (service area); footer tagline in the same voice."
+      },
+      "promise": {
+        "displayName": "Promise",
+        "purpose": "The hero promise line in cream-soft."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy and form inputs (17px so iOS never zooms)."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Field labels, legends, header contact, footer links."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Every button label, uppercase."
+      }
+    },
+    "shadows": [
+      {
+        "name": "pinned-photo",
+        "value": "0 14px 30px -12px rgba(22,39,31,.35), 0 2px 6px rgba(22,39,31,.12)",
+        "purpose": "A photo held off the wall by tape."
+      },
+      {
+        "name": "tape",
+        "value": "0 1px 3px rgba(22,39,31,.18)",
+        "purpose": "Paper joint tape lying on a photo edge."
+      },
+      {
+        "name": "proof-slab",
+        "value": "0 14px 28px -14px rgba(15,64,45,.7)",
+        "purpose": "Green-tinted lift under the Facebook proof link."
+      },
+      {
+        "name": "field-focus-halo",
+        "value": "0 0 0 3px rgba(168,119,26,.28)",
+        "purpose": "Focus state on text fields and chips (gold-deep)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "state-color",
+        "value": "0.2s (background-color, color, border-color)",
+        "purpose": "Buttons, arrow disc, proof slab."
+      },
+      {
+        "name": "state-field",
+        "value": "0.15s (border-color, box-shadow)",
+        "purpose": "Fields, chips; also the button press transform."
+      },
+      {
+        "name": "hint-fade",
+        "value": "opacity 0.5s",
+        "purpose": "Wall hint fades on first touch and returns for the reward."
+      },
+      {
+        "name": "skim-edge",
+        "value": "16 points, amplitude 7, speed 0.9, phase 1.7 per edge",
+        "purpose": "Moving skim-coat section edges; animate only while intersecting."
+      },
+      {
+        "name": "wall-knife",
+        "value": "KNIFE 64, DRY 0.02, FEATHER 6, AUTO_SPEED 0.3, RESET_LOOPS 2, RESET_FRAMES 60, IDLE_MS 2200, LIFT_PX 26, REWARD_PX 600",
+        "purpose": "Hero wall tunables, top of the first script IIFE; pauses off screen and when hidden."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "still frame",
+        "purpose": "Wall draws one finished seam with the knife at rest; edges draw once; clip shows controls; transforms and smooth scroll removed."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "xs",
+        "value": "max-width: 380px"
+      },
+      {
+        "name": "sm",
+        "value": "max-width: 429px / min-width: 430px"
+      },
+      {
+        "name": "md",
+        "value": "min-width: 760px"
+      },
+      {
+        "name": "lg",
+        "value": "min-width: 1024px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "max-height: 500px and orientation: landscape"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Primary action: Free estimate, Open Messenger.",
+      "html": "<a class=\"ds-btn-gold\" href=\"#\">Free estimate</a>",
+      "css": ".ds-btn-gold{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 22px;border-radius:12px;font:800 1rem/1 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);text-transform:uppercase;letter-spacing:.02em;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s,transform .15s;background:#deac39;color:#082a1d;border-color:#deac39} .ds-btn-gold:hover{background:#ebbd4f;border-color:#ebbd4f} .ds-btn-gold:active{transform:translateY(1px)} .ds-btn-gold:focus-visible{outline:3px solid #deac39;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on green grounds only.",
+      "html": "<div class=\"ds-on-green\"><a class=\"ds-btn-line\" href=\"#\">See my work</a></div>",
+      "css": ".ds-on-green{background:#0f402d;padding:20px} .ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 22px;border-radius:12px;font:800 1rem/1 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);text-transform:uppercase;letter-spacing:.02em;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s,transform .15s;background:transparent;color:#f6f1e4;border-color:#deac39} .ds-btn-line:hover{background:rgba(222,172,57,.14)} .ds-btn-line:focus-visible{outline:3px solid #deac39;outline-offset:3px}"
+    },
+    {
+      "name": "Green Submit Button",
+      "kind": "button",
+      "refersTo": "button-green",
+      "description": "Form submit on mud; gold-deep outline on hover and focus.",
+      "html": "<button class=\"ds-btn-green\" type=\"button\">Write my message</button>",
+      "css": ".ds-btn-green{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 22px;border-radius:12px;font:800 1rem/1 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);text-transform:uppercase;letter-spacing:.02em;border:2px solid transparent;cursor:pointer;text-decoration:none;transition:background-color .2s,color .2s,border-color .2s,transform .15s;width:100%;background:#0f402d;color:#f6f1e4;border-color:#0f402d} .ds-btn-green:hover{background:#1a5a40;border-color:#1a5a40;outline:3px solid #a8771a;outline-offset:2px} .ds-btn-green:focus-visible{outline:3px solid #a8771a;outline-offset:2px}"
+    },
+    {
+      "name": "Service Row",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Large uppercase link rows; the arrow disc carries all hover/focus state, the row is never outlined.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\">Hanging<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\">Taping<span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:0;border-top:2px solid #ddd6c6;background:#f1f0ec} .ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding:12px 2px;border-bottom:2px solid #ddd6c6;text-decoration:none;color:#16271f;font:900 clamp(1.35rem,6vw,2rem)/1.1 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);text-transform:uppercase;letter-spacing:-.01em} .ds-row:hover,.ds-row:focus-visible{outline:none;background:none;box-shadow:none} .ds-arrow{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e6dfcf;color:#0f402d;flex:none;transition:background-color .2s,color .2s,transform .2s} .ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#deac39;color:#082a1d;transform:translateX(3px)} .ds-row:focus-visible .ds-arrow{outline:3px solid #a8771a;outline-offset:3px}"
+    },
+    {
+      "name": "Step",
+      "kind": "custom",
+      "refersTo": "step-numeral",
+      "description": "Numbered step on green: gold disc, uppercase title, cream-soft copy.",
+      "html": "<ol class=\"ds-steps\"><li><div><h3>Free estimate</h3><p>I look it over and give you a straight price before any work starts.</p></div></li></ol>",
+      "css": ".ds-steps{list-style:none;margin:0;padding:20px;background:#0f402d;counter-reset:s;font:400 17px/1.55 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif)} .ds-steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start} .ds-steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:#deac39;color:#082a1d;font-weight:900;font-size:1.4rem} .ds-steps h3{margin:4px 0 0;font-size:1.5rem;line-height:1.1;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;color:#f6f1e4} .ds-steps p{margin:6px 0 0;color:#e6e0c8;max-width:40ch}"
+    },
+    {
+      "name": "Taped Photo Pin",
+      "kind": "card",
+      "refersTo": "photo-pin",
+      "description": "Photo on a white mat, slightly rotated, held by two strips of joint tape; no caption.",
+      "html": "<div class=\"ds-board\"><figure class=\"ds-pin\"><span class=\"ds-tape ds-a\"></span><span class=\"ds-tape ds-b\"></span><div class=\"ds-photo\"></div></figure></div>",
+      "css": ".ds-board{padding:30px;background:#f1f0ec} .ds-pin{position:relative;margin:0;width:200px;background:#fff;padding:8px;border-radius:6px;box-shadow:0 14px 30px -12px rgba(22,39,31,.35),0 2px 6px rgba(22,39,31,.12);transform:rotate(-1.2deg)} .ds-photo{aspect-ratio:3/4;border-radius:3px;background:#d3ccbe} .ds-tape{position:absolute;width:96px;height:26px;background:linear-gradient(transparent 46%,rgba(120,105,80,.2) 48%,rgba(120,105,80,.2) 52%,transparent 54%),#ece5d4;box-shadow:0 1px 3px rgba(22,39,31,.18);z-index:1} .ds-a{top:-10px;left:-18px;transform:rotate(-38deg)} .ds-b{top:-10px;right:-18px;transform:rotate(36deg)}"
+    },
+    {
+      "name": "Facebook Proof Link",
+      "kind": "custom",
+      "refersTo": "proof-link",
+      "description": "Green slab linking to more work on Facebook.",
+      "html": "<a class=\"ds-fb\" href=\"#\"><span class=\"ds-fb-disc\"><svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21h3.1Z\"/></svg></span><span>Click to see more of my work.</span><svg class=\"ds-go\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></a>",
+      "css": ".ds-fb{display:flex;align-items:center;gap:14px;max-width:560px;padding:18px 20px;border-radius:14px;background:#0f402d;color:#f6f1e4;text-decoration:none;font:800 1.25rem/1.2 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s} .ds-fb:hover{background:#1a5a40} .ds-fb-disc{width:44px;height:44px;flex:none;border-radius:50%;background:#deac39;color:#082a1d;display:grid;place-items:center} .ds-go{margin-left:auto;width:26px;height:26px;color:#deac39;flex:none}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "text-field",
+      "description": "Fresh-coat field; gold-deep border on hover and focus, error state after failed submit.",
+      "html": "<div class=\"ds-field\"><label for=\"ds-n\">Your name</label><input id=\"ds-n\" type=\"text\"></div><div class=\"ds-field ds-invalid\"><label for=\"ds-t\">Your town</label><input id=\"ds-t\" type=\"text\"><p class=\"ds-err\">Add your town so I know where the job is.</p></div>",
+      "css": ".ds-field{margin-bottom:22px;font:400 17px/1.55 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);color:#16271f} .ds-field label{display:block;font-weight:800;margin-bottom:8px} .ds-field input{width:100%;box-sizing:border-box;min-height:54px;padding:13px 14px;border:2px solid #8a8069;border-radius:10px;background:#fffdf8;color:#16271f;font:400 17px/1.4 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);transition:border-color .15s,box-shadow .15s} .ds-field input:hover{border-color:#a8771a} .ds-field input:focus{outline:none;border-color:#a8771a;box-shadow:0 0 0 3px rgba(168,119,26,.28)} .ds-invalid input{border-color:#b3412c} .ds-err{margin:8px 0 0;color:#9b2c1c;font-weight:700;font-size:1rem}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Checkbox/radio chips; checked fills green.",
+      "html": "<div class=\"ds-chips\"><label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Hanging</span></label><label class=\"ds-chip\"><input type=\"checkbox\"><span>Taping</span></label></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:10px;font:400 17px/1.55 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);color:#16271f} .ds-chip{position:relative} .ds-chip input{position:absolute;opacity:0;width:1px;height:1px} .ds-chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:2px solid #8a8069;border-radius:10px;background:#fffdf8;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s} .ds-chip span:hover{border-color:#a8771a} .ds-chip input:focus-visible+span{border-color:#a8771a;box-shadow:0 0 0 3px rgba(168,119,26,.28)} .ds-chip input:checked+span{background:#0f402d;border-color:#0f402d;color:#f6f1e4} .ds-chip input:checked+span:hover{border-color:#a8771a}"
+    },
+    {
+      "name": "Sent-Message Panel",
+      "kind": "card",
+      "refersTo": "sent-panel",
+      "description": "Composed Messenger message, selectable, with copy and Open Messenger.",
+      "html": "<div class=\"ds-sent\"><h3>Your message is ready</h3><p class=\"ds-msg\">Hi! I'd like a free estimate.\nName: Sam\nTown: Kingston</p><button class=\"ds-copy\" type=\"button\">Copy message</button><p class=\"ds-note\">Open Messenger, paste it into the chat, and send a photo of the room if you can.</p></div>",
+      "css": ".ds-sent{padding:20px;border-radius:14px;background:#fffdf8;border:2px solid #ddd6c6;font:400 17px/1.55 var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);color:#16271f} .ds-sent h3{margin:0;font-size:1.25rem;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;color:#0f402d} .ds-msg{margin:12px 0 0;padding:14px;border-radius:10px;background:#f1f0ec;white-space:pre-wrap;font-size:16px;line-height:1.5;user-select:text} .ds-copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #8a8069;border-radius:10px;background:transparent;font:800 1rem var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif);color:#16271f;cursor:pointer} .ds-copy:hover,.ds-copy:focus-visible{border-color:#a8771a;outline:none} .ds-note{margin:12px 0 0;color:#3c4f45}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header-contact",
+      "description": "Brand lockup left, Message me top right; the only header action.",
+      "html": "<div class=\"ds-top\"><span class=\"ds-brand\"><span class=\"ds-mark\"></span><span>Green Mountain<br>Renovations</span></span><a class=\"ds-msg-link\" href=\"#\">Message me</a></div>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;background:#0f402d;color:#f6f1e4;font-family:var(--font, -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif)} .ds-brand{display:flex;align-items:center;gap:10px} .ds-mark{width:46px;height:46px;border-radius:50%;background:#fff} .ds-brand>span:last-child{font-weight:900;text-transform:uppercase;line-height:1;font-size:.9rem} .ds-msg-link{display:inline-flex;align-items:center;min-height:44px;color:#f6f1e4;font-weight:800;font-size:.9rem;text-decoration:none} .ds-msg-link:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:#deac39}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Finished Wall",
+    "overview": "The page is a freshly finished room. Deep logo green and dry joint-compound white take turns as the ground, each section joined to the next by a moving skim-coat edge, and the gold taping knife from the owner's logo is the only thing that works on the page. The hero holds one live drywall wall: paper tape over the seams, screw dimples down the studs, and the knife skimming wet grey mud that dries to the page's own white. Everything outside that wall is quiet: heavy uppercase headings, plain first-person copy, flat grounds, and physical objects (photos, tape) only where the trade would have them.\n\nThe world is joint compound skimmed over taped drywall seams: paper tape, screw dimples, wet mud drying to flat white, feathered knife edges. Photos are taped up with the same paper joint tape. The system is phone-first and built for Facebook's in-app browser; desktop is the phone layout given more room, never a different site.",
+    "keyCharacteristics": [
+      "Two grounds only, strictly alternating: logo green and dry mud white.",
+      "One signature interaction (the hero wall); every other surface is still or barely moving.",
+      "Heavy (900) uppercase display in the system sans; no display webfont.",
+      "Gold is the knife: it marks the primary action and answers hover, it is not decoration.",
+      "Depth belongs to physical objects pinned to the wall, never to sections or panels."
+    ],
+    "rules": [
+      {
+        "name": "The Knife Gold Rule",
+        "body": "Gold is the knife. It fills the primary action, numbers the steps, and answers a pointer; it never tints a section ground, a border at rest, or a body paragraph.",
+        "section": "colors"
+      },
+      {
+        "name": "The Deep Gold on Mud Rule",
+        "body": "Bright `gold` lives on green. On mud and fresh-coat surfaces, any gold line or outline uses `gold-deep`.",
+        "section": "colors"
+      },
+      {
+        "name": "The System Stack Rule",
+        "body": "Every pitch site uses the system font stack by the owner-designer's mandate. Weight 900 and uppercase do the display work; do not add a webfont without that mandate changing.",
+        "section": "typography"
+      },
+      {
+        "name": "The Upright Accent Rule",
+        "body": "Emphasis inside a heading is a color change to gold, never italic or a second family.",
+        "section": "typography"
+      },
+      {
+        "name": "The Alternating Coat Rule",
+        "body": "Section grounds alternate strictly: green hero, mud services, green steps, mud work, green area, mud estimate, night-green footer. A new section takes the opposite ground of the one above it.",
+        "section": "layout"
+      },
+      {
+        "name": "The Skim Edge Rule",
+        "body": "Every section after the hero opens with a 28px skim-coat edge: an SVG wave filled with that section's own ground, overlapping the section above by 27px. It is a smooth swept curve, never a torn or zigzag line.",
+        "section": "layout"
+      },
+      {
+        "name": "The Header Contact Rule",
+        "body": "The contact action sits in the header, top right, opposite the brand. There is no sticky bottom bar and no floating contact button.",
+        "section": "layout"
+      },
+      {
+        "name": "The Pinned Object Rule",
+        "body": "A shadow means something is physically fixed to the wall. Sections, text, rows, form fields and the sent panel never cast one.",
+        "section": "elevation & depth"
+      },
+      {
+        "name": "The Hand-Hung Rule",
+        "body": "Pinned photos are always slightly rotated and always held by two strips of tape. Nothing else on the page is rotated.",
+        "section": "shapes"
+      },
+      {
+        "name": "The Arrow-Only Rule",
+        "body": "A service row never gains an outline, box, background or shadow on hover or focus. The arrow disc carries the entire state; the row text and rules stay put.",
+        "section": "components"
+      },
+      {
+        "name": "The No Caption Rule",
+        "body": "Pinned photos carry no visible caption, label or overlay; descriptions live in alt text and aria-labels only.",
+        "section": "components"
+      },
+      {
+        "name": "The Footer Email Rule",
+        "body": "An email address may appear only in the footer, and only once the business publishes one. None exists, so none is shown.",
+        "section": "components"
+      },
+      {
+        "name": "The Still Frame Rule",
+        "body": "Under reduced motion the wall renders one still picture (the horizontal seam finished and dry, the knife resting on the vertical seam), the edges draw once and stop, the clip shows controls instead of autoplaying, and transforms and smooth scrolling are removed. Colors may still change state.",
+        "section": "components"
+      },
+      {
+        "name": "The Off-Screen Rule",
+        "body": "Nothing animates off screen. The wall pauses when out of view or the tab is hidden, each edge animates only while intersecting, and the clip pauses when scrolled away.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** alternate green and mud grounds and open every new section with a skim-coat edge in its own ground color.",
+      "**Do** keep the contact action in the header, top right.",
+      "**Do** use `gold-deep` for any gold line, border or outline on mud or fresh-coat surfaces.",
+      "**Do** put hover accents inside `@media (hover:hover)`.",
+      "**Do** hold every photo up with two strips of joint tape, slightly rotated, with no caption.",
+      "**Do** keep form inputs at 17px or larger and controls at 44px or taller.",
+      "**Do** change the canvas `DRY_RGB` whenever `mud` changes.",
+      "**Do** give every new animation a reduced-motion still frame and an off-screen pause."
+    ],
+    "donts": [
+      "**Don't** add a sticky bottom bar or floating contact button.",
+      "**Don't** show an email anywhere but the footer, and never an invented one.",
+      "**Don't** add captions, labels or overlays to photos.",
+      "**Don't** outline, box, fill or shadow a service row on hover or focus; the arrow disc carries the state.",
+      "**Don't** use gold as decoration at rest on interactive elements in light sections; on mud it appears as a hover or focus response (the gold \"Open Messenger\" button is the one resting gold action there).",
+      "**Don't** add a second interactive or animated set piece; the wall is the only one.",
+      "**Don't** put shadows on sections, panels, rows or fields.",
+      "**Don't** add a display webfont or italic emphasis."
+    ]
+  }
+}
