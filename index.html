@@ -23,7 +23,7 @@
   --green-700:#1a5a40;
   --gold:#deac39;        /* logo gold */
   --gold-deep:#a8771a;   /* gold that reads on cream */
-  --mud:#f3efe6;         /* dry joint compound: light section ground */
+  --mud:#f1f0ec;         /* dry joint compound: light section ground */
   --board:#d3ccbe;       /* drywall paper */
   --ink:#16271f;         /* text on mud */
   --ink-soft:#3c4f45;
@@ -60,7 +60,7 @@ p{margin:0}
 .top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
 .brand img{width:46px;height:46px;border-radius:50%;background:#fff;padding:5px;flex:none;object-fit:contain}
-.brand span{font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.01em;font-size:.92rem}
+.brand span{font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.01em;font-size:.9rem}
 .brand small{display:block;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.05em;margin-top:4px;white-space:nowrap}
 .top-msg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:var(--cream);font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
 .top-msg .icon{color:var(--gold)}
@@ -72,13 +72,13 @@ p{margin:0}
 .hero h1 em{font-style:normal;color:var(--gold)}
 .promise{margin-top:16px;max-width:34ch;color:var(--cream-soft);font-size:clamp(1.02rem,4.4vw,1.2rem);line-height:1.45}
 .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;max-width:440px}
-.hero-actions .btn{padding:0 10px;font-size:.92rem}
+.hero-actions .btn{padding:0 10px;font-size:.9rem}
 .wall{position:relative;height:clamp(230px,36svh,320px);background:var(--board);touch-action:none;cursor:none;-webkit-user-select:none;user-select:none}
 .wall canvas{position:absolute;inset:0;width:100%;height:100%}
 .wall .fallback{position:absolute;inset:0;background:
   linear-gradient(90deg,transparent calc(48% - 9px),#ebe5d7 calc(48% - 9px),#ebe5d7 calc(48% + 9px),transparent calc(48% + 9px)),
   linear-gradient(transparent calc(52% - 9px),#ebe5d7 calc(52% - 9px),#ebe5d7 calc(52% + 9px),transparent calc(52% + 9px)),var(--board)}
-.wall-hint{position:absolute;left:16px;top:14px;text-shadow:0 0 6px #ddd6c8,0 0 2px #ddd6c8;z-index:2;font-size:.95rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
+.wall-hint{position:absolute;right:16px;bottom:40px;text-shadow:0 0 8px #d3ccbe,0 0 16px #d3ccbe,0 0 2px #d3ccbe;z-index:2;font-size:.9rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
 .wall.touched .wall-hint{opacity:0}
 .wall.done .wall-hint{opacity:1}
 
@@ -105,7 +105,7 @@ p{margin:0}
 .steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:26px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
 .steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--green-950);font-weight:900;font-size:1.4rem}
-.steps h3{font-size:1.3rem;line-height:1.1;color:var(--cream);margin-top:4px}
+.steps h3{font-size:1.5rem;line-height:1.1;color:var(--cream);margin-top:4px}
 .steps p{margin-top:6px;color:var(--cream-soft);max-width:40ch}
 
 /* ===== Work ===== */
@@ -121,13 +121,13 @@ p{margin:0}
 .pin:nth-child(3){transform:rotate(-.6deg)}
 /* paper joint tape holding each photo up */
 .tape{position:absolute;width:96px;height:26px;background:
-  linear-gradient(transparent 46%,rgba(120,105,80,.18) 48%,rgba(120,105,80,.18) 52%,transparent 54%),
-  radial-gradient(circle,rgba(120,105,80,.22) 1px,transparent 1.4px) 0 0/7px 7px,#efe8d6;
+  linear-gradient(transparent 46%,rgba(120,105,80,.2) 48%,rgba(120,105,80,.2) 52%,transparent 54%),#ece5d4;
   box-shadow:0 1px 3px rgba(22,39,31,.18);z-index:1}
 .tape.a{top:-10px;left:-18px;transform:rotate(-38deg)}
 .tape.b{top:-10px;right:-18px;transform:rotate(36deg)}
+@media (max-width:759px){.pin:nth-child(2) .tape.b{right:-6px}.pin:nth-child(3) .tape.a{left:-6px}}
 .fb-more{display:flex;align-items:center;gap:14px;margin-top:40px;padding:18px 20px;border-radius:var(--radius);background:var(--green);color:var(--cream);text-decoration:none;
-  font-weight:800;font-size:1.15rem;line-height:1.2;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
+  font-weight:800;font-size:1.25rem;line-height:1.2;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
 .fb-more .fb{width:44px;height:44px;flex:none;border-radius:50%;background:var(--gold);color:var(--green-950);display:grid;place-items:center}
 .fb-more .fb svg{width:24px;height:24px}
 .fb-more .go{margin-left:auto;width:26px;height:26px;color:var(--gold);flex:none}
@@ -154,7 +154,7 @@ fieldset{border:0;margin:0;padding:0;min-width:0}
 .chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:2px solid #8a8069;border-radius:10px;background:#fffdf8;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
 .chip input:focus-visible+span{border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(168,119,26,.28)}
 .chip input:checked+span{background:var(--green);border-color:var(--green);color:var(--cream)}
-.err{display:none;margin-top:8px;color:#9b2c1c;font-weight:700;font-size:.95rem}
+.err{display:none;margin-top:8px;color:#9b2c1c;font-weight:700;font-size:1rem}
 .invalid .err{display:block}
 .invalid input[type=text]{border-color:#b3412c}
 form .btn{width:100%}
@@ -166,7 +166,7 @@ form .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
 .sent .note{margin-top:12px;color:var(--ink-soft)}
 .sent .btn{width:100%;margin-top:14px}
 .sent .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
-.copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #8a8069;border-radius:10px;background:transparent;font:800 .95rem var(--font);color:var(--ink);cursor:pointer}
+.copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #8a8069;border-radius:10px;background:transparent;font:800 1rem var(--font);color:var(--ink);cursor:pointer}
 .copy:focus-visible{border-color:var(--gold-deep);outline:none}
 
 /* ===== Footer ===== */
@@ -177,7 +177,6 @@ footer .name{margin-top:10px;color:var(--cream-soft)}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px}
 footer .links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:800;text-decoration:none}
 footer .links .icon{color:var(--gold)}
-footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
 
 /* ===== Hover extras (mouse only, so taps don't leave accents stuck on) ===== */
 @media (hover:hover){
@@ -195,6 +194,8 @@ footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
 }
 
 /* ===== Larger screens ===== */
+@media (max-width:429px){.brand small{display:none}}
+@media (max-width:380px){.top{padding:12px 12px}.brand{gap:8px}.brand img{width:40px;height:40px}.brand span{font-size:.875rem}.top-msg{gap:6px}}
 @media (min-width:430px){
   .brand span{font-size:1rem}
 }
@@ -240,7 +241,7 @@ THESIS: A drywall craftsman's page that feels like standing in a freshly finishe
 OWN-WORLD: Joint compound skimmed over taped drywall seams. Paper tape, screw dimples, wet mud drying to flat white, feathered knife edges. Photos are taped up with paper joint tape.
 STORY: Walls built to last (hero, try the knife) → what I do (hanging, taping, finishing, renovations) → how it works → the work + Facebook → where → free estimate by Messenger → seal and tagline.
 FIRST VIEWPORT (phone): logo + name, Message me top-right; "Walls built to last."; promise; Free estimate + See my work; the live wall with the gold knife skimming the seams.
-FORM: System sans, heavy uppercase display; green/mud alternating sections joined by moving skim-coat edges; one interactive wall, everything else quiet.
+FORM (no concept roll: unattended pitch-site build, world chosen from the trade): System sans, heavy uppercase display; green/mud alternating sections joined by moving skim-coat edges; one interactive wall, everything else quiet.
 -->
 <header class="hero on-green">
   <div class="top">
@@ -255,7 +256,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   </div>
   <div class="hero-copy">
     <h1>Walls built <em>to last.</em></h1>
-    <p class="promise">I hang, tape and finish every wall like it's going up in my own home, so once the paint goes on, all you see is smooth.</p>
+    <p class="promise">I don't call a wall done until you can't find a seam once the paint goes on.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="#estimate">Free estimate</a>
       <a class="btn btn-line" href="#work">See my work</a>
@@ -289,7 +290,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       <ol class="steps">
         <li><div><h3>Tell me about the job</h3><p>Send me a message with the room and what needs doing. Photos help.</p></div></li>
         <li><div><h3>Free estimate</h3><p>I look it over and give you a straight price before any work starts.</p></div></li>
-        <li><div><h3>Hung, taped, finished</h3><p>Every seam taped, coated and sanded smooth, left ready for your paint.</p></div></li>
+        <li><div><h3>Hung, taped, finished</h3><p>I feather every coat out until the seams disappear, then leave it ready for paint.</p></div></li>
       </ol>
     </div>
   </section>
@@ -394,10 +395,12 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
 /* ===== The wall: gold taping knife skims mud over taped seams ===== */
 (function(){
   var KNIFE = 64;          // blade width in CSS px (mud stroke width)
-  var DRY = 0.02;          // per-frame pull of wet mud toward dry white
-  var REGROW = 0.02;       // fade applied every REGROW_EVERY frames so the seams come back (~17s)
-  var REGROW_EVERY = 20;
+  var DRY = 0.02;          // per-frame pull of wet grey mud toward dry white
+  var WET = 'rgb(204,201,193)', DRY_RGB = '241,240,236';  // dry = the page ground (--mud)
+  var FEATHER = 6;         // soft outer edge of each pass, px
   var AUTO_SPEED = 0.3;    // seams per second the knife covers when nobody is touching
+  var RESET_LOOPS = 2;     // after this many full auto routes the dry coat fades and the job starts over
+  var RESET_FRAMES = 60;
   var IDLE_MS = 2200;      // hand control back to the auto knife after this
   var SEAM_X = 0.48, SEAM_Y = 0.52;
 
@@ -406,14 +409,16 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   var ctx = cv.getContext('2d');
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var phone = matchMedia('(max-width: 759px)').matches;
+  if(phone) SEAM_X = 0.40;   // keeps the vertical passes clear of the hint
   var dpr = Math.min(window.devicePixelRatio || 1, phone ? 1.5 : 2);
   var REWARD_PX = 600;     // after this much dragging, the hint says the wall's ready for paint
   var dragged = 0, rewarded = false, hint = wall.querySelector('.wall-hint');
   var W = 0, H = 0, base, mud, mctx;
-  var knife = {x:0, y:0, px:0, py:0, ang:-0.9};
+  var knife = {x:0, y:0, px:0, py:0, ang:-0.9, pang:-0.9};
+  var loop = 0, fading = 0;
   var BIAS = {x:.55, y:-.83};  // a right hand holds the handle up and to the right
   var pointer = {on:false, cx:0, cy:0, last:0};
-  var t0 = performance.now(), visible = true, raf = 0, n = 0, lifted = false, onScreen = true;
+  var t0 = performance.now(), visible = true, raf = 0, lifted = false, onScreen = true;
   var LIFT_PX = 26;        // auto knife only lays mud when it's this close to its route
 
   function seeded(s){ return function(){ s = (s*16807) % 2147483647; return s/2147483647; }; }
@@ -464,32 +469,44 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     drawBase();
     mud = document.createElement('canvas'); mud.width = W*dpr; mud.height = H*dpr; mctx = mud.getContext('2d');
     if(old) mctx.drawImage(old,0,0,mud.width,mud.height);
-    mctx.setTransform(dpr,0,0,dpr,0,0); mctx.lineCap = 'round'; mctx.lineJoin = 'round';
+    mctx.setTransform(dpr,0,0,dpr,0,0); mctx.lineCap = 'butt';
     if(!knife.x){ knife.x = knife.px = W*.2; knife.y = knife.py = H*SEAM_Y; }
   }
 
-  // the route an unattended finisher takes: along the long seam, then the short one, with a loose wrist
+  // the route an unattended finisher takes: a first pass down each seam, then a wider
+  // feathering pass either side of it, the way a second coat goes on
   function autoTarget(t){
-    var p = (t*AUTO_SPEED) % 4, sx = W*SEAM_X, sy = H*SEAM_Y, wob = Math.sin(t*2.3)*10 + Math.sin(t*3.7+1)*6;
+    var p = (t*AUTO_SPEED) % 4, sx = W*SEAM_X, sy = H*SEAM_Y, wob = Math.sin(t*2.3)*3 + Math.sin(t*3.7+1)*2, off = KNIFE*.36;
     var e = function(u){ return u<.5 ? 2*u*u : 1-Math.pow(-2*u+2,2)/2; };
     if(p<1) return {x: W*.06 + (W*.88)*e(p), y: sy + wob};
     if(p<2) return {x: sx + wob, y: H*.92 - (H*.84)*e(p-1)};
-    if(p<3) return {x: W*.94 - (W*.88)*e(p-2), y: sy + wob*.8 + Math.sin(t*1.3)*H*.12};
-    return {x: sx + wob*.8 + Math.sin(t*1.1)*W*.08, y: H*.08 + (H*.84)*e(p-3)};
+    if(p<3) return {x: W*.94 - (W*.88)*e(p-2), y: sy + off + wob};
+    return {x: sx - off + wob, y: H*.08 + (H*.84)*e(p-3)};
   }
 
-  function skim(x0,y0,x1,y1){
-    var d = Math.hypot(x1-x0, y1-y0); if(d < .5) return;
+  // stamp the blade from where its edge was to where it is now: a quad, not a round brush
+  function skim(x0,y0,a0,x1,y1,a1){
+    if(Math.hypot(x1-x0, y1-y0) < .4) return;
+    var ex0 = -Math.sin(a0), ey0 = Math.cos(a0), ex1 = -Math.sin(a1), ey1 = Math.cos(a1);
+    function quad(h){
+      mctx.beginPath();
+      mctx.moveTo(x0+ex0*h, y0+ey0*h); mctx.lineTo(x1+ex1*h, y1+ey1*h);
+      mctx.lineTo(x1-ex1*h, y1-ey1*h); mctx.lineTo(x0-ex0*h, y0-ey0*h); mctx.closePath(); mctx.fill();
+    }
+    var h = KNIFE/2;
     mctx.globalCompositeOperation = 'source-over';
-    // body of the coat
-    mctx.strokeStyle = 'rgb(222,217,205)'; mctx.lineWidth = KNIFE*.86;
-    mctx.beginPath(); mctx.moveTo(x0,y0); mctx.lineTo(x1,y1); mctx.stroke();
-    // drag marks along the stroke
-    var nx = -(y1-y0)/d, ny = (x1-x0)/d;
-    for(var k=-2;k<=2;k++){ var o = k*KNIFE*.17 + Math.sin(x1*.05+k)*1.5;
-      mctx.strokeStyle = k%2 ? 'rgba(250,247,240,.35)' : 'rgba(190,183,168,.28)'; mctx.lineWidth = 1.6;
-      mctx.beginPath(); mctx.moveTo(x0+nx*o, y0+ny*o); mctx.lineTo(x1+nx*o, y1+ny*o); mctx.stroke(); }
+    mctx.fillStyle = 'rgba(204,201,193,.4)'; quad(h + FEATHER);   // feathered edge
+    mctx.fillStyle = WET; quad(h - 1);                              // the coat
+    // lap ridges where each end of the blade drags
+    mctx.strokeStyle = 'rgba(175,168,152,.55)'; mctx.lineWidth = 1;
+    mctx.beginPath(); mctx.moveTo(x0+ex0*h, y0+ey0*h); mctx.lineTo(x1+ex1*h, y1+ey1*h);
+    mctx.moveTo(x0-ex0*h, y0-ey0*h); mctx.lineTo(x1-ex1*h, y1-ey1*h); mctx.stroke();
+    // drag streaks the blade leaves inside the coat
+    for(var k=0;k<STREAKS.length;k++){ var o = STREAKS[k]*h;
+      mctx.strokeStyle = k%2 ? 'rgba(250,249,245,.35)' : 'rgba(170,165,154,.3)'; mctx.lineWidth = k%3 ? 1 : 1.6;
+      mctx.beginPath(); mctx.moveTo(x0+ex0*o, y0+ey0*o); mctx.lineTo(x1+ex1*o, y1+ey1*o); mctx.stroke(); }
   }
+  var STREAKS = [-.72,-.41,-.18,.07,.33,.58,.81];
 
   function drawKnife(x,y,ang,up){
     ctx.save(); ctx.translate(x,y); ctx.rotate(ang); if(up) ctx.scale(1.06,1.06);
@@ -530,11 +547,14 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       var want = Math.atan2(my + BIAS.y*.9, mx + BIAS.x*.9), da = want - knife.ang;
       da = Math.atan2(Math.sin(da), Math.cos(da)); knife.ang += da*.12;
     }
-    if(!lifted) skim(knife.px, knife.py, knife.x, knife.y);
-    knife.px = knife.x; knife.py = knife.y;
-    // wet mud dries toward flat white; old mud slowly sinks back so the job never ends
-    mctx.globalCompositeOperation = 'source-atop'; mctx.fillStyle = 'rgba(247,244,237,'+DRY+')'; mctx.fillRect(0,0,W,H);
-    if(++n % REGROW_EVERY === 0){ mctx.globalCompositeOperation = 'destination-out'; mctx.fillStyle = 'rgba(0,0,0,'+REGROW+')'; mctx.fillRect(0,0,W,H); }
+    if(!lifted) skim(knife.px, knife.py, knife.pang, knife.x, knife.y, knife.ang);
+    knife.px = knife.x; knife.py = knife.y; knife.pang = knife.ang;
+    // wet grey mud dries to flat white
+    mctx.globalCompositeOperation = 'source-atop'; mctx.fillStyle = 'rgba('+DRY_RGB+','+DRY+')'; mctx.fillRect(0,0,W,H);
+    // every RESET_LOOPS routes, the finished coat fades and a fresh wall goes up
+    var l = Math.floor(t*AUTO_SPEED/4/RESET_LOOPS);
+    if(l !== loop){ loop = l; if(!pointer.on) fading = RESET_FRAMES; }
+    if(fading > 0){ fading--; mctx.globalCompositeOperation = 'destination-out'; mctx.fillStyle = 'rgba(0,0,0,.08)'; mctx.fillRect(0,0,W,H); if(!fading) mctx.clearRect(0,0,W,H); }
     mctx.globalCompositeOperation = 'source-over';
     ctx.clearRect(0,0,W,H);
     ctx.drawImage(base,0,0,W,H); ctx.drawImage(mud,0,0,W,H);
@@ -561,25 +581,29 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   }
   if(reduce){
     // a still picture: one seam already finished, the knife resting on the other
-    for(var i=0;i<40;i++){ var p0 = {x:W*.06+i*W*.022, y:H*SEAM_Y}; skim(p0.x, p0.y, p0.x+W*.022, p0.y); }
+    for(var i=0;i<40;i++){ var p0 = {x:W*.06+i*W*.022, y:H*SEAM_Y}; skim(p0.x, p0.y, 0, p0.x+W*.022, p0.y, 0); }
+    mctx.globalCompositeOperation = 'source-atop'; mctx.fillStyle = 'rgb('+DRY_RGB+')'; mctx.fillRect(0,0,W,H); mctx.globalCompositeOperation = 'source-over';
     knife.x = W*SEAM_X; knife.y = H*.3; frame(performance.now());
   } else raf = requestAnimationFrame(frame);
 })();
 
 /* ===== Skim-coat edges between sections ===== */
 (function(){
-  var SPEED = 0.9, AMP = 7, POINTS = 24;
+  var SPEED = 0.9, AMP = 7, POINTS = 16;
   var edges = [].slice.call(document.querySelectorAll('[data-edge]'));
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var live = new Set(), raf = 0;
   function shape(i, t){
-    var d = 'M0 28 L0 ', ph = i*1.7;
+    var ph = i*1.7, pts = [];
     for(var k=0;k<=POINTS;k++){
       var x = k*1200/POINTS;
-      var y = 14 + Math.sin(x*.006 + t*SPEED + ph)*AMP*.6 + Math.sin(x*.017 - t*SPEED*1.6 + ph*2)*AMP*.35 + Math.sin(x*.041 + t*SPEED*.7)*AMP*.18;
-      d += (k ? ' L' + x.toFixed(0) + ' ' : '') + y.toFixed(2);
+      pts.push([x, 14 + Math.sin(x*.006 + t*SPEED + ph)*AMP*.65 + Math.sin(x*.017 - t*SPEED*1.6 + ph*2)*AMP*.35]);
     }
-    return d + ' L1200 28 Z';
+    // smooth curve through the midpoints, so the edge is a swept coat, not a torn line
+    var d = 'M0 28 L0 ' + pts[0][1].toFixed(2);
+    for(k=1;k<pts.length;k++){ var mx = (pts[k-1][0]+pts[k][0])/2, my = (pts[k-1][1]+pts[k][1])/2;
+      d += ' Q' + pts[k-1][0].toFixed(0) + ' ' + pts[k-1][1].toFixed(2) + ' ' + mx.toFixed(0) + ' ' + my.toFixed(2); }
+    return d + ' L1200 ' + pts[pts.length-1][1].toFixed(2) + ' L1200 28 Z';
   }
   function tick(now){
     raf = 0; var t = now/1000;
