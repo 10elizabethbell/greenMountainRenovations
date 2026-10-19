@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Green Mountain Renovations · Drywall hung, taped and finished</title>
+<meta name="description" content="Drywall hung, taped and finished, built to last. Green Mountain Renovations serves Kingston and the surrounding area. Message me for a free estimate.">
+<meta name="theme-color" content="#0f402d">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Green Mountain Renovations">
+<meta property="og:description" content="Drywall hung, taped and finished, built to last. Serving Kingston and the surrounding area. Message me for a free estimate.">
+<meta property="og:url" content="https://10elizabethbell.github.io/greenMountainRenovations/">
+<meta property="og:image" content="https://10elizabethbell.github.io/greenMountainRenovations/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+/* ===== Tokens ===== */
+:root{
+  --green-950:#082a1d;   /* footer */
+  --green:#0f402d;       /* logo green, hero ground */
+  --green-700:#1a5a40;
+  --gold:#deac39;        /* logo gold */
+  --gold-deep:#a8771a;   /* gold that reads on cream */
+  --mud:#f3efe6;         /* dry joint compound: light section ground */
+  --board:#d3ccbe;       /* drywall paper */
+  --ink:#16271f;         /* text on mud */
+  --ink-soft:#3c4f45;
+  --cream:#f6f1e4;       /* text on green */
+  --cream-soft:#cddbd2;
+  --radius:14px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
+body{margin:0;background:var(--mud);color:var(--ink);font:400 17px/1.55 var(--font);overflow-x:hidden}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--gold);color:var(--green-950)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+h1,h2,h3{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
+h2{font-size:clamp(2rem,9vw,3.6rem)}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px}
+.on-green{background:var(--green);color:var(--cream)}
+
+/* ===== Buttons ===== */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:0 22px;border-radius:12px;
+  font:800 1rem/1 var(--font);text-transform:uppercase;letter-spacing:.02em;text-decoration:none;border:2px solid transparent;cursor:pointer;
+  transition:background-color .2s,color .2s,border-color .2s,transform .15s}
+.btn:active{transform:translateY(1px)}
+.btn-gold{background:var(--gold);color:var(--green-950);border-color:var(--gold)}
+.btn-gold:hover{background:#ebbd4f;border-color:#ebbd4f}
+.btn-line{color:var(--cream);border-color:var(--gold)}
+.btn-line:hover{background:rgba(222,172,57,.14)}
+.btn-green{background:var(--green);color:var(--cream);border-color:var(--green)}
+.btn-green:hover{background:var(--green-700);border-color:var(--green-700)}
+.icon{width:22px;height:22px;flex:none}
+
+/* ===== Header ===== */
+.top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.brand img{width:46px;height:46px;border-radius:50%;background:#fff;padding:5px;flex:none;object-fit:contain}
+.brand span{font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.01em;font-size:.92rem}
+.brand small{display:block;color:var(--gold);font-weight:700;font-size:.66rem;letter-spacing:.12em;margin-top:4px}
+.top-msg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:var(--cream);font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
+.top-msg .icon{color:var(--gold)}
+.top-msg:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+
+/* ===== Hero ===== */
+.hero{position:relative}
+.hero-copy{position:relative;z-index:2;padding:18px 20px 26px}
+.hero h1{font-size:clamp(3rem,15vw,6rem);color:var(--cream)}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.promise{margin-top:16px;max-width:34ch;color:var(--cream-soft);font-size:clamp(1.02rem,4.4vw,1.2rem);line-height:1.45}
+.hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px;max-width:440px}
+.hero-actions .btn{padding:0 10px;font-size:.92rem}
+.wall{position:relative;height:clamp(230px,36svh,320px);background:var(--board);touch-action:none;cursor:none;-webkit-user-select:none;user-select:none}
+.wall canvas{position:absolute;inset:0;width:100%;height:100%}
+.wall .fallback{position:absolute;inset:0;background:
+  linear-gradient(90deg,transparent calc(48% - 9px),#ebe5d7 calc(48% - 9px),#ebe5d7 calc(48% + 9px),transparent calc(48% + 9px)),
+  linear-gradient(transparent calc(52% - 9px),#ebe5d7 calc(52% - 9px),#ebe5d7 calc(52% + 9px),transparent calc(52% + 9px)),var(--board)}
+.wall-hint{position:absolute;right:16px;bottom:40px;z-index:2;font-size:.85rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
+.wall.touched .wall-hint{opacity:0}
+
+/* ===== Mud-edge dividers ===== */
+.sec{position:relative}
+.edge{position:absolute;left:0;right:0;top:-27px;height:28px;width:100%;pointer-events:none;z-index:2;display:block}
+.edge path{fill:currentColor}
+
+/* ===== Services ===== */
+.services{padding:64px 0 70px;background:var(--mud)}
+.services h2{color:var(--green)}
+.rows{list-style:none;margin:28px 0 0;padding:0;border-top:2px solid #ddd6c6}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px;padding:12px 2px;border-bottom:2px solid #ddd6c6;
+  text-decoration:none;color:var(--ink);font-weight:900;text-transform:uppercase;font-size:clamp(1.35rem,6vw,2rem);letter-spacing:-.01em}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.arrow{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e6dfcf;color:var(--green);flex:none;transition:background-color .2s,color .2s,transform .2s}
+.arrow svg{width:20px;height:20px}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);color:var(--green-950);transform:translateX(3px)}
+.row:focus-visible .arrow{outline:3px solid var(--gold-deep);outline-offset:3px}
+
+/* ===== How it works ===== */
+.how{padding:72px 0 76px}
+.how h2{color:var(--cream)}
+.steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:26px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--green-950);font-weight:900;font-size:1.4rem}
+.steps h3{font-size:1.3rem;color:var(--cream);margin-top:4px}
+.steps p{margin-top:6px;color:var(--cream-soft);max-width:40ch}
+
+/* ===== Work ===== */
+.work{padding:72px 0 78px;background:var(--mud)}
+.work h2{color:var(--green)}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px;margin-top:34px}
+.pin:first-child{grid-column:1/-1}
+.pin:first-child video{aspect-ratio:4/5}
+.pin{position:relative;margin:0;background:#fff;padding:8px;border-radius:6px;box-shadow:0 14px 30px -12px rgba(22,39,31,.35),0 2px 6px rgba(22,39,31,.12)}
+.pin video,.pin img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;background:var(--board);-webkit-user-drag:none;user-select:none}
+.pin:nth-child(1){transform:rotate(-1.2deg)}
+.pin:nth-child(2){transform:rotate(1deg)}
+.pin:nth-child(3){transform:rotate(-.6deg)}
+/* paper joint tape holding each photo up */
+.tape{position:absolute;width:96px;height:26px;background:
+  linear-gradient(transparent 46%,rgba(120,105,80,.18) 48%,rgba(120,105,80,.18) 52%,transparent 54%),
+  radial-gradient(circle,rgba(120,105,80,.22) 1px,transparent 1.4px) 0 0/7px 7px,#efe8d6;
+  box-shadow:0 1px 3px rgba(22,39,31,.18);z-index:1}
+.tape.a{top:-10px;left:-18px;transform:rotate(-38deg)}
+.tape.b{top:-10px;right:-18px;transform:rotate(36deg)}
+.fb-more{display:flex;align-items:center;gap:14px;margin-top:40px;padding:18px 20px;border-radius:var(--radius);background:var(--green);color:var(--cream);text-decoration:none;
+  font-weight:900;text-transform:uppercase;font-size:1.08rem;line-height:1.15;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
+.fb-more:hover{background:var(--green-700)}
+.fb-more .fb{width:44px;height:44px;flex:none;border-radius:50%;background:var(--gold);color:var(--green-950);display:grid;place-items:center}
+.fb-more .fb svg{width:24px;height:24px}
+.fb-more .go{margin-left:auto;width:26px;height:26px;color:var(--gold);flex:none}
+
+/* ===== Area ===== */
+.area{padding:68px 0 70px}
+.area h2{color:var(--cream)}
+.area p{margin-top:14px;font-size:clamp(1.3rem,5.5vw,1.8rem);font-weight:800;color:var(--gold);line-height:1.25;max-width:24ch}
+
+/* ===== Estimate form ===== */
+.estimate{padding:72px 0 80px;background:var(--mud)}
+.estimate h2{color:var(--green)}
+.estimate .lede{margin-top:14px;color:var(--ink-soft);max-width:44ch}
+form{margin-top:28px;display:grid;gap:22px;max-width:640px}
+label,.legend{display:block;font-weight:800;margin-bottom:8px}
+.opt{font-weight:500;color:var(--ink-soft)}
+input[type=text],textarea{width:100%;min-height:54px;padding:13px 14px;border:2px solid #cfc6b2;border-radius:10px;background:#fffdf8;color:var(--ink);font:400 17px/1.4 var(--font);transition:border-color .15s,box-shadow .15s}
+textarea{min-height:110px;resize:vertical}
+input[type=text]:hover,textarea:hover{border-color:var(--gold-deep)}
+input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(168,119,26,.28)}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px}
+.chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:2px solid #cfc6b2;border-radius:10px;background:#fffdf8;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
+.chip span:hover{border-color:var(--gold-deep)}
+.chip input:focus-visible+span{border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(168,119,26,.28)}
+.chip input:checked+span{background:var(--green);border-color:var(--green);color:var(--cream)}
+.chip input:checked+span:hover{border-color:var(--gold-deep)}
+.err{display:none;margin-top:8px;color:#9b2c1c;font-weight:700;font-size:.95rem}
+.invalid .err{display:block}
+.invalid input[type=text]{border-color:#b3412c}
+form .btn{width:100%}
+form .btn:hover,form .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
+.sent{display:none;margin-top:6px;padding:20px;border-radius:var(--radius);background:#fffdf8;border:2px solid #ddd6c6}
+.sent.show{display:block}
+.sent h3{font-size:1.25rem;color:var(--green)}
+.sent .msg{margin:12px 0 0;padding:14px;border-radius:10px;background:var(--mud);white-space:pre-wrap;font:400 16px/1.5 var(--font);-webkit-user-select:text;user-select:text}
+.sent .note{margin-top:12px;color:var(--ink-soft)}
+.sent .btn{width:100%;margin-top:14px}
+.sent .btn:hover,.sent .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
+.copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #cfc6b2;border-radius:10px;background:transparent;font:800 .95rem var(--font);color:var(--ink);cursor:pointer}
+.copy:hover,.copy:focus-visible{border-color:var(--gold-deep);outline:none}
+
+/* ===== Footer ===== */
+footer{position:relative;background:var(--green-950);color:var(--cream);padding:70px 0 40px;text-align:center}
+footer .seal{width:150px;height:150px;margin:0 auto;border-radius:50%;background:#fff;padding:6px}
+footer .tag{margin-top:20px;font-weight:900;text-transform:uppercase;font-size:clamp(1.6rem,7vw,2.4rem);line-height:1;color:var(--gold)}
+footer .name{margin-top:10px;color:var(--cream-soft)}
+footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px}
+footer .links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:800;text-decoration:none}
+footer .links a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+footer .links .icon{color:var(--gold)}
+footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
+
+/* ===== Larger screens ===== */
+@media (min-width:430px){
+  .brand span{font-size:1rem}
+}
+@media (min-width:760px){
+  .top{padding:18px 32px}
+  .wrap{padding:0 32px}
+  .hero-copy{padding:40px 32px 48px}
+  .wall{height:340px}
+  .board{grid-template-columns:repeat(3,1fr);gap:34px}
+  .pin:first-child{grid-column:auto}
+  .pin:first-child video{aspect-ratio:3/4}
+  .steps{grid-template-columns:repeat(3,1fr);gap:28px}
+  .steps li{grid-template-columns:1fr;gap:14px}
+}
+@media (min-width:1024px){
+  .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto 1fr;min-height:min(760px,100svh)}
+  .hero .top{grid-column:1/-1}
+  .hero-copy{align-self:center;padding:24px 40px 90px 56px}
+  .wall{height:auto;min-height:540px;margin:0 0 0 0;border-top-left-radius:22px}
+  .promise{font-size:1.25rem}
+  .services .wrap,.estimate .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
+  .rows{margin-top:6px}
+  form{margin-top:0}
+  .estimate .lede{margin-bottom:0}
+  .fb-more{max-width:560px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none!important}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: A drywall craftsman's page that feels like standing in a freshly finished room: deep logo green, joint-compound white, and the gold taping knife from their own logo doing the work.
+OWN-WORLD: Joint compound skimmed over taped drywall seams. Paper tape, screw dimples, wet mud drying to flat white, feathered knife edges. Photos are taped up with paper joint tape.
+STORY: Walls built to last (hero, try the knife) → what I do (hanging, taping, finishing, renovations) → how it works → the work + Facebook → where → free estimate by Messenger → seal and tagline.
+FIRST VIEWPORT (phone): logo + name, Message me top-right; "Walls built to last."; promise; Free estimate + See my work; the live wall with the gold knife skimming the seams.
+FORM: System sans, heavy uppercase display; green/mud alternating sections joined by moving skim-coat edges; one interactive wall, everything else quiet.
+-->
+<header class="hero on-green">
+  <div class="top">
+    <a class="brand" href="#top" id="top" aria-label="Green Mountain Renovations, home">
+      <img src="img/mark.webp" width="46" height="46" alt="">
+      <span>Green Mountain<br>Renovations<small>Where quality matters</small></span>
+    </a>
+    <a class="top-msg" href="https://m.me/61594566614771">
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.14 7.16.16.15.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.88.39 2.91.39 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>
+      <span>Message me</span>
+    </a>
+  </div>
+  <div class="hero-copy">
+    <h1>Walls built <em>to last.</em></h1>
+    <p class="promise">I hang, tape and finish every wall like it's going up in my own home, so once the paint goes on, all you see is smooth.</p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="#estimate">Free estimate</a>
+      <a class="btn btn-line" href="#work">See my work</a>
+    </div>
+  </div>
+  <div class="wall" id="wall" aria-label="A drywall wall. Drag across it to skim the seams with the taping knife." role="img">
+    <div class="fallback"></div>
+    <canvas id="wallCanvas"></canvas>
+    <span class="wall-hint">Drag to finish the wall</span>
+  </div>
+</header>
+
+<main>
+  <section class="sec services" id="services">
+    <svg class="edge" data-edge style="color:var(--mud)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+    <div class="wrap">
+      <h2>What I do</h2>
+      <ul class="rows">
+        <li><a class="row" href="#estimate" data-service="Hanging">Hanging<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-service="Taping">Taping<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-service="Finishing">Finishing<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-service="Renovation">Renovations<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec how on-green" id="how">
+    <svg class="edge" data-edge style="color:var(--green)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+    <div class="wrap">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><div><h3>Tell me about the job</h3><p>Send me a message with the room and what needs doing. Photos help.</p></div></li>
+        <li><div><h3>Free estimate</h3><p>I look it over and give you a straight price before any work starts.</p></div></li>
+        <li><div><h3>Hung, taped, finished</h3><p>I do the job right the first time and leave it ready for paint.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec work" id="work">
+    <svg class="edge" data-edge style="color:var(--mud)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+    <div class="wrap">
+      <h2>My work</h2>
+      <div class="board">
+        <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
+          <video src="img/walkthrough.mp4" poster="img/poster.webp" muted loop playsinline preload="none" aria-label="Walking past a wall with taped and mudded seams" data-lazyvideo></video>
+        </figure>
+        <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
+          <img src="img/wall.webp" width="720" height="1280" loading="lazy" decoding="async" draggable="false" alt="A full wall with every seam taped and coated in joint compound">
+        </figure>
+        <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
+          <img src="img/doorway.webp" width="720" height="1280" loading="lazy" decoding="async" draggable="false" alt="New drywall around a doorway, seams taped and mudded">
+        </figure>
+      </div>
+      <a class="fb-more" href="https://www.facebook.com/profile.php?id=61594566614771">
+        <span class="fb"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21h3.1Z"/></svg></span>
+        <span>Click to see more of my work.</span>
+        <svg class="go" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="sec area on-green" id="area">
+    <svg class="edge" data-edge style="color:var(--green)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+    <div class="wrap">
+      <h2>Where I work</h2>
+      <p>Kingston and the surrounding area.</p>
+    </div>
+  </section>
+
+  <section class="sec estimate" id="estimate">
+    <svg class="edge" data-edge style="color:var(--mud)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+    <div class="wrap">
+      <div>
+        <h2>Free estimate</h2>
+        <p class="lede">Answer a few questions and I'll have what I need to get back to you. Your answers become a message you send me on Facebook Messenger.</p>
+      </div>
+      <form id="estimateForm" novalidate>
+        <div class="field" id="f-name">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" autocomplete="name" required>
+          <p class="err">Add your name so I know who I'm talking to.</p>
+        </div>
+        <div class="field" id="f-town">
+          <label for="town">Your town</label>
+          <input type="text" id="town" name="town" autocomplete="address-level2" required>
+          <p class="err">Add your town so I know where the job is.</p>
+        </div>
+        <fieldset>
+          <legend class="legend">What needs doing? <span class="opt">(pick any)</span></legend>
+          <div class="chips">
+            <label class="chip"><input type="checkbox" name="svc" value="Hanging"><span>Hanging</span></label>
+            <label class="chip"><input type="checkbox" name="svc" value="Taping"><span>Taping</span></label>
+            <label class="chip"><input type="checkbox" name="svc" value="Finishing"><span>Finishing</span></label>
+            <label class="chip"><input type="checkbox" name="svc" value="Renovation"><span>Renovation</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="details">The room and the job <span class="opt">(optional)</span></label>
+          <textarea id="details" name="details" placeholder="e.g. basement, two new walls and a ceiling"></textarea>
+        </div>
+        <fieldset>
+          <legend class="legend">When?</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="when" value="As soon as possible"><span>As soon as possible</span></label>
+            <label class="chip"><input type="radio" name="when" value="In the next month or two"><span>Next month or two</span></label>
+            <label class="chip"><input type="radio" name="when" value="Just planning for now"><span>Just planning</span></label>
+          </div>
+        </fieldset>
+        <button class="btn btn-green" type="submit">Write my message</button>
+        <div class="sent" id="sent" aria-live="polite" tabindex="-1">
+          <h3>Your message is ready</h3>
+          <p class="msg" id="msgText"></p>
+          <button class="copy" type="button" id="copyBtn">Copy message</button>
+          <p class="note" id="copyNote">Open Messenger, then paste it into the chat.</p>
+          <a class="btn btn-gold" href="https://m.me/61594566614771" id="openMsg">Open Messenger</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <svg class="edge" data-edge style="color:var(--green-950)" viewBox="0 0 1200 28" preserveAspectRatio="none" aria-hidden="true"><path/></svg>
+  <div class="wrap">
+    <img class="seal" src="img/logo.webp" width="150" height="150" loading="lazy" alt="Green Mountain Renovations logo">
+    <p class="tag">Where quality matters</p>
+    <p class="name">Green Mountain Renovations · Drywall and renovations</p>
+    <div class="links">
+      <a href="https://www.facebook.com/profile.php?id=61594566614771"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21h3.1Z"/></svg>Facebook</a>
+      <a href="https://m.me/61594566614771"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.14 7.16.16.15.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.88.39 2.91.39 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>Messenger</a>
+    </div>
+    <p class="area-line">Serving Kingston and the surrounding area.</p>
+  </div>
+</footer>
+
+<script>
+/* ===== The wall: gold taping knife skims mud over taped seams ===== */
+(function(){
+  var KNIFE = 64;          // blade width in CSS px (mud stroke width)
+  var DRY = 0.02;          // per-frame pull of wet mud toward dry white
+  var REGROW = 0.02;       // fade applied every REGROW_EVERY frames so the seams come back (~17s)
+  var REGROW_EVERY = 20;
+  var AUTO_SPEED = 0.3;    // seams per second the knife covers when nobody is touching
+  var IDLE_MS = 2200;      // hand control back to the auto knife after this
+  var SEAM_X = 0.48, SEAM_Y = 0.52;
+
+  var wall = document.getElementById('wall'), cv = document.getElementById('wallCanvas');
+  if(!wall || !cv || !cv.getContext) return;
+  var ctx = cv.getContext('2d');
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phone = matchMedia('(max-width: 759px)').matches;
+  var dpr = Math.min(window.devicePixelRatio || 1, phone ? 1.5 : 2);
+  var W = 0, H = 0, base, mud, mctx;
+  var knife = {x:0, y:0, px:0, py:0, ang:-0.9};
+  var BIAS = {x:.55, y:-.83};  // a right hand holds the handle up and to the right
+  var pointer = {on:false, cx:0, cy:0, last:0};
+  var t0 = performance.now(), visible = true, raf = 0, n = 0;
+
+  function seeded(s){ return function(){ s = (s*16807) % 2147483647; return s/2147483647; }; }
+
+  function drawBase(){
+    base = document.createElement('canvas'); base.width = W*dpr; base.height = H*dpr;
+    var b = base.getContext('2d'); b.scale(dpr,dpr);
+    var r = seeded(7);
+    // paper face with raking light from the top left
+    var g = b.createLinearGradient(0,0,W,H); g.addColorStop(0,'#ddd6c8'); g.addColorStop(1,'#c7bfb0');
+    b.fillStyle = g; b.fillRect(0,0,W,H);
+    // paper fibre
+    for(var i=0;i<W*H/55;i++){ b.fillStyle = r()<.5 ? 'rgba(255,255,255,.10)' : 'rgba(90,80,60,.07)'; b.fillRect(r()*W, r()*H, 1+r()*2, 1); }
+    // tapered sheet edges either side of each seam
+    var sx = W*SEAM_X, sy = H*SEAM_Y;
+    var gx = b.createLinearGradient(sx-34,0,sx+34,0); gx.addColorStop(0,'rgba(0,0,0,0)'); gx.addColorStop(.5,'rgba(70,60,45,.10)'); gx.addColorStop(1,'rgba(0,0,0,0)');
+    b.fillStyle = gx; b.fillRect(sx-34,0,68,H);
+    var gy = b.createLinearGradient(0,sy-34,0,sy+34); gy.addColorStop(0,'rgba(0,0,0,0)'); gy.addColorStop(.5,'rgba(70,60,45,.10)'); gy.addColorStop(1,'rgba(0,0,0,0)');
+    b.fillStyle = gy; b.fillRect(0,sy-34,W,68);
+    // the joints themselves
+    b.fillStyle = 'rgba(70,60,45,.35)'; b.fillRect(sx-.5,0,1.2,H); b.fillRect(0,sy-.5,W,1.2);
+    // paper tape over the joints, slightly wavy as it was pressed in by hand
+    function tape(vertical){
+      var len = vertical ? H : W, c = vertical ? sx : sy, half = 9;
+      b.beginPath();
+      for(var s=0;s<=len;s+=12){ var o = Math.sin(s*.021+(vertical?1:4))*1.2; vertical ? b.lineTo(c-half+o, s) : b.lineTo(s, c-half+o); }
+      for(s=len;s>=0;s-=12){ var o2 = Math.sin(s*.021+(vertical?1:4))*1.2; vertical ? b.lineTo(c+half+o2, s) : b.lineTo(s, c+half+o2); }
+      b.closePath(); b.fillStyle = '#ece5d4'; b.shadowColor = 'rgba(60,50,35,.25)'; b.shadowBlur = 3; b.fill(); b.shadowBlur = 0;
+      b.fillStyle = 'rgba(120,105,80,.22)'; vertical ? b.fillRect(c-.5,0,1,H) : b.fillRect(0,c-.5,W,1);
+    }
+    tape(true); tape(false);
+    // screw heads down each stud: 16" apart across, about a foot apart down
+    var stud = Math.max(96, W/6.5), down = Math.max(80, H/4.2), r2 = seeded(11);
+    for(var x=sx%stud + stud*.5; x<W; x+=stud){ if(Math.abs(x-sx)<24) continue;
+      for(var y=down*.45; y<H; y+=down){ if(Math.abs(y-sy)<22) continue;
+        var px = x + (r2()-.5)*4, py = y + (r2()-.5)*6;
+        var rg = b.createRadialGradient(px-.6,py-.6,0,px,py,3.6); rg.addColorStop(0,'rgba(85,75,58,.5)'); rg.addColorStop(.7,'rgba(85,75,58,.18)'); rg.addColorStop(1,'rgba(85,75,58,0)');
+        b.fillStyle = rg; b.beginPath(); b.arc(px,py,3.6,0,7); b.fill();
+      }
+    }
+  }
+
+  function size(){
+    var r = wall.getBoundingClientRect(), w = Math.round(r.width), h = Math.round(r.height);
+    if(w === W && h === H) return;          // the address bar fires resize; keep the visitor's mud
+    var old = mud; W = w; H = h;
+    cv.width = W*dpr; cv.height = H*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    drawBase();
+    mud = document.createElement('canvas'); mud.width = W*dpr; mud.height = H*dpr; mctx = mud.getContext('2d');
+    if(old) mctx.drawImage(old,0,0,mud.width,mud.height);
+    mctx.setTransform(dpr,0,0,dpr,0,0); mctx.lineCap = 'round'; mctx.lineJoin = 'round';
+    if(!knife.x){ knife.x = knife.px = W*.2; knife.y = knife.py = H*SEAM_Y; }
+  }
+
+  // the route an unattended finisher takes: along the long seam, then the short one, with a loose wrist
+  function autoTarget(t){
+    var p = (t*AUTO_SPEED) % 4, sx = W*SEAM_X, sy = H*SEAM_Y, wob = Math.sin(t*2.3)*10 + Math.sin(t*3.7+1)*6;
+    var e = function(u){ return u<.5 ? 2*u*u : 1-Math.pow(-2*u+2,2)/2; };
+    if(p<1) return {x: W*.06 + (W*.88)*e(p), y: sy + wob};
+    if(p<2) return {x: sx + wob, y: H*.92 - (H*.84)*e(p-1)};
+    if(p<3) return {x: W*.94 - (W*.88)*e(p-2), y: sy + wob*.8 + Math.sin(t*1.3)*H*.12};
+    return {x: sx + wob*.8 + Math.sin(t*1.1)*W*.08, y: H*.08 + (H*.84)*e(p-3)};
+  }
+
+  function skim(x0,y0,x1,y1){
+    var d = Math.hypot(x1-x0, y1-y0); if(d < .5) return;
+    mctx.globalCompositeOperation = 'source-over';
+    // body of the coat
+    mctx.strokeStyle = 'rgb(222,217,205)'; mctx.lineWidth = KNIFE*.86;
+    mctx.beginPath(); mctx.moveTo(x0,y0); mctx.lineTo(x1,y1); mctx.stroke();
+    // drag marks along the stroke
+    var nx = -(y1-y0)/d, ny = (x1-x0)/d;
+    for(var k=-2;k<=2;k++){ var o = k*KNIFE*.17 + Math.sin(x1*.05+k)*1.5;
+      mctx.strokeStyle = k%2 ? 'rgba(250,247,240,.35)' : 'rgba(190,183,168,.28)'; mctx.lineWidth = 1.6;
+      mctx.beginPath(); mctx.moveTo(x0+nx*o, y0+ny*o); mctx.lineTo(x1+nx*o, y1+ny*o); mctx.stroke(); }
+  }
+
+  function drawKnife(x,y,ang){
+    ctx.save(); ctx.translate(x,y); ctx.rotate(ang);
+    // blade: wide edge on the wall, narrowing to the ferrule
+    var h = KNIFE/2;
+    ctx.shadowColor = 'rgba(30,25,15,.35)'; ctx.shadowBlur = 14; ctx.shadowOffsetX = 6; ctx.shadowOffsetY = 10;
+    var g = ctx.createLinearGradient(0,-h,0,h); g.addColorStop(0,'#f1cd6c'); g.addColorStop(.5,'#deac39'); g.addColorStop(1,'#a8771a');
+    ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(-3,-h); ctx.lineTo(3,-h); ctx.lineTo(KNIFE*.62,-h*.36); ctx.lineTo(KNIFE*.62,h*.36); ctx.lineTo(3,h); ctx.lineTo(-3,h); ctx.closePath(); ctx.fill();
+    ctx.shadowColor = 'transparent';
+    // wet mud on the leading edge
+    ctx.fillStyle = 'rgba(230,225,214,.95)'; ctx.fillRect(-4,-h,6,KNIFE);
+    // ferrule and handle
+    var hg = ctx.createLinearGradient(0,-8,0,8); hg.addColorStop(0,'#e7bd52'); hg.addColorStop(1,'#8f6414');
+    ctx.fillStyle = hg; ctx.fillRect(KNIFE*.6,-h*.38,10,h*.76);
+    ctx.beginPath(); ctx.moveTo(KNIFE*.6+10,-8); ctx.lineTo(KNIFE*1.55,-6.5); ctx.arc(KNIFE*1.55,0,6.5,-Math.PI/2,Math.PI/2); ctx.lineTo(KNIFE*.6+10,8); ctx.closePath(); ctx.fill();
+    ctx.fillStyle = '#5c400c'; ctx.beginPath(); ctx.arc(KNIFE*1.5,0,2.6,0,7); ctx.fill();
+    ctx.restore();
+  }
+
+  function frame(now){
+    raf = 0;
+    var t = (now - t0)/1000, target;
+    if(pointer.on && now - pointer.last < IDLE_MS){
+      var r = cv.getBoundingClientRect();     // read every frame: the page scrolls under the finger
+      target = {x: pointer.cx - r.left, y: pointer.cy - r.top};
+      knife.x += (target.x - knife.x)*.55; knife.y += (target.y - knife.y)*.55;
+    } else {
+      pointer.on = false; target = autoTarget(t);
+      knife.x += (target.x - knife.x)*.12; knife.y += (target.y - knife.y)*.12;
+    }
+    // turn the blade so its edge faces the way it's travelling, handle trailing up and to the right
+    var vx = knife.x - knife.px, vy = knife.y - knife.py, sp = Math.hypot(vx,vy);
+    if(sp > .6){
+      var mx = vx/sp, my = vy/sp; if(mx*BIAS.x + my*BIAS.y < 0){ mx = -mx; my = -my; }
+      var want = Math.atan2(my + BIAS.y*.9, mx + BIAS.x*.9), da = want - knife.ang;
+      da = Math.atan2(Math.sin(da), Math.cos(da)); knife.ang += da*.12;
+    }
+    skim(knife.px, knife.py, knife.x, knife.y);
+    knife.px = knife.x; knife.py = knife.y;
+    // wet mud dries toward flat white; old mud slowly sinks back so the job never ends
+    mctx.globalCompositeOperation = 'source-atop'; mctx.fillStyle = 'rgba(247,244,237,'+DRY+')'; mctx.fillRect(0,0,W,H);
+    if(++n % REGROW_EVERY === 0){ mctx.globalCompositeOperation = 'destination-out'; mctx.fillStyle = 'rgba(0,0,0,'+REGROW+')'; mctx.fillRect(0,0,W,H); }
+    mctx.globalCompositeOperation = 'source-over';
+    ctx.clearRect(0,0,W,H);
+    ctx.drawImage(base,0,0,W,H); ctx.drawImage(mud,0,0,W,H);
+    drawKnife(knife.x, knife.y, knife.ang);
+    if(visible && !reduce) raf = requestAnimationFrame(frame);
+  }
+
+  function setPointer(x,y){ pointer.on = true; pointer.cx = x; pointer.cy = y; pointer.last = performance.now(); wall.classList.add('touched'); }
+  wall.addEventListener('pointermove', function(e){ if(e.pointerType === 'mouse' || e.buttons) setPointer(e.clientX, e.clientY); });
+  wall.addEventListener('pointerdown', function(e){ setPointer(e.clientX, e.clientY); });
+  wall.addEventListener('touchstart', function(e){ var p = e.touches[0]; setPointer(p.clientX, p.clientY); }, {passive:true});
+  wall.addEventListener('touchmove', function(e){ var p = e.touches[0]; setPointer(p.clientX, p.clientY); }, {passive:true});
+  wall.addEventListener('pointerleave', function(e){ if(e.pointerType === 'mouse') pointer.last = 0; });
+
+  size();
+  wall.querySelector('.fallback').style.display = 'none';
+  window.addEventListener('resize', function(){ size(); if(reduce) frame(performance.now()); });
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(es){ visible = es[0].isIntersecting; if(visible && !raf && !reduce) raf = requestAnimationFrame(frame); }).observe(wall);
+  }
+  if(reduce){
+    // a still picture: one seam already finished, the knife resting on the other
+    for(var i=0;i<40;i++){ var p0 = {x:W*.06+i*W*.022, y:H*SEAM_Y}; skim(p0.x, p0.y, p0.x+W*.022, p0.y); }
+    knife.x = W*SEAM_X; knife.y = H*.3; frame(performance.now());
+  } else raf = requestAnimationFrame(frame);
+})();
+
+/* ===== Skim-coat edges between sections ===== */
+(function(){
+  var SPEED = 0.9, AMP = 7, POINTS = 24;
+  var edges = [].slice.call(document.querySelectorAll('[data-edge]'));
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var live = new Set(), raf = 0;
+  function shape(i, t){
+    var d = 'M0 28 L0 ', ph = i*1.7;
+    for(var k=0;k<=POINTS;k++){
+      var x = k*1200/POINTS;
+      var y = 14 + Math.sin(x*.006 + t*SPEED + ph)*AMP*.6 + Math.sin(x*.017 - t*SPEED*1.6 + ph*2)*AMP*.35 + Math.sin(x*.041 + t*SPEED*.7)*AMP*.18;
+      d += (k ? ' L' + x.toFixed(0) + ' ' : '') + y.toFixed(2);
+    }
+    return d + ' L1200 28 Z';
+  }
+  function tick(now){
+    raf = 0; var t = now/1000;
+    live.forEach(function(i){ edges[i].firstElementChild.setAttribute('d', shape(i,t)); });
+    if(live.size) raf = requestAnimationFrame(tick);
+  }
+  edges.forEach(function(e,i){ e.firstElementChild.setAttribute('d', shape(i,0)); });
+  if(reduce || !('IntersectionObserver' in window)) return;
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(en){ var i = edges.indexOf(en.target); en.isIntersecting ? live.add(i) : live.delete(i); });
+    if(live.size && !raf) raf = requestAnimationFrame(tick);
+  });
+  edges.forEach(function(e){ io.observe(e); });
+})();
+
+/* ===== Portfolio clip plays only while on screen ===== */
+(function(){
+  var v = document.querySelector('[data-lazyvideo]');
+  if(!v || !('IntersectionObserver' in window)) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){ v.controls = true; return; }
+  new IntersectionObserver(function(es){
+    if(es[0].isIntersecting){ v.preload = 'auto'; var p = v.play(); if(p && p.catch) p.catch(function(){ v.controls = true; }); }
+    else v.pause();
+  }, {rootMargin:'200px'}).observe(v);
+})();
+
+/* ===== Service rows pre-pick the service in the estimate form ===== */
+(function(){
+  document.querySelectorAll('[data-service]').forEach(function(a){
+    a.addEventListener('click', function(){
+      var box = document.querySelector('input[name=svc][value="'+a.getAttribute('data-service')+'"]');
+      if(box) box.checked = true;
+    });
+  });
+})();
+
+/* ===== Estimate form → a message for Messenger ===== */
+(function(){
+  var form = document.getElementById('estimateForm'); if(!form) return;
+  var sent = document.getElementById('sent'), out = document.getElementById('msgText');
+  var copyBtn = document.getElementById('copyBtn'), note = document.getElementById('copyNote');
+  function val(id){ return document.getElementById(id).value.trim(); }
+  function check(id){ var ok = !!val(id); document.getElementById('f-'+id).classList.toggle('invalid', !ok); return ok; }
+  ['name','town'].forEach(function(id){ document.getElementById(id).addEventListener('input', function(){ if(document.getElementById('f-'+id).classList.contains('invalid')) check(id); }); });
+  function copy(text){
+    if(navigator.clipboard && window.isSecureContext){ return navigator.clipboard.writeText(text).then(function(){ return true; }, function(){ return false; }); }
+    return Promise.resolve(false);
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var okName = check('name'), okTown = check('town');
+    if(!okName || !okTown){ document.getElementById(okName ? 'town' : 'name').focus(); return; }
+    var svc = [].map.call(form.querySelectorAll('input[name=svc]:checked'), function(i){ return i.value.toLowerCase(); });
+    var when = form.querySelector('input[name=when]:checked');
+    var lines = ['Hi! I\'d like a free estimate.', 'Name: ' + val('name'), 'Town: ' + val('town')];
+    if(svc.length) lines.push('Work: ' + svc.join(', '));
+    if(val('details')) lines.push('The job: ' + val('details'));
+    if(when) lines.push('When: ' + when.value);
+    var text = lines.join('\n');
+    out.textContent = text; sent.classList.add('show'); sent.focus({preventScroll:true});
+    sent.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center'});
+    copy(text).then(function(ok){
+      note.textContent = ok ? 'Copied. Open Messenger and paste it into the chat.' : 'Press and hold the message to copy it, then open Messenger and paste it into the chat.';
+    });
+  });
+  copyBtn.addEventListener('click', function(){
+    copy(out.textContent).then(function(ok){
+      copyBtn.textContent = ok ? 'Copied' : 'Copy blocked here';
+      if(!ok) note.textContent = 'Press and hold the message to copy it, then open Messenger and paste it into the chat.';
+      setTimeout(function(){ copyBtn.textContent = 'Copy message'; }, 2200);
+    });
+  });
+})();
+</script>
+</body>
+</html>
