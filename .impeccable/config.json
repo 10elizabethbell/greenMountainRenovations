@@ -41,6 +41,15 @@
         ],
         "createdAt": "2026-10-19T05:35:48.206Z",
         "reason": "flagged text is the uppercase logo lockup in the header, not body copy"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T05:36:54.185Z",
+        "reason": "committed world: dry joint-compound white is the page ground (direction contract)"
       }
     ]
   }

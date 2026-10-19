@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Green Mountain Renovations · Drywall hung, taped and finished</title>
 <meta name="description" content="Drywall hung, taped and finished, built to last. Green Mountain Renovations serves Kingston and the surrounding area. Message me for a free estimate.">
 <meta name="theme-color" content="#0f402d">
@@ -39,6 +39,7 @@ img,video{display:block;max-width:100%}
 a{color:inherit}
 ::selection{background:var(--gold);color:var(--green-950)}
 :focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+.services :focus-visible,.work :focus-visible,.estimate :focus-visible{outline-color:var(--green)}
 h1,h2,h3{margin:0;font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:.98;text-wrap:balance}
 h2{font-size:clamp(2rem,9vw,3.6rem)}
 p{margin:0}
@@ -51,11 +52,8 @@ p{margin:0}
   transition:background-color .2s,color .2s,border-color .2s,transform .15s}
 .btn:active{transform:translateY(1px)}
 .btn-gold{background:var(--gold);color:var(--green-950);border-color:var(--gold)}
-.btn-gold:hover{background:#ebbd4f;border-color:#ebbd4f}
 .btn-line{color:var(--cream);border-color:var(--gold)}
-.btn-line:hover{background:rgba(222,172,57,.14)}
 .btn-green{background:var(--green);color:var(--cream);border-color:var(--green)}
-.btn-green:hover{background:var(--green-700);border-color:var(--green-700)}
 .icon{width:22px;height:22px;flex:none}
 
 /* ===== Header ===== */
@@ -63,10 +61,9 @@ p{margin:0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
 .brand img{width:46px;height:46px;border-radius:50%;background:#fff;padding:5px;flex:none;object-fit:contain}
 .brand span{font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.01em;font-size:.92rem}
-.brand small{display:block;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.1em;margin-top:4px}
+.brand small{display:block;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.05em;margin-top:4px;white-space:nowrap}
 .top-msg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:var(--cream);font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
 .top-msg .icon{color:var(--gold)}
-.top-msg:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
 
 /* ===== Hero ===== */
 .hero{position:relative}
@@ -81,8 +78,9 @@ p{margin:0}
 .wall .fallback{position:absolute;inset:0;background:
   linear-gradient(90deg,transparent calc(48% - 9px),#ebe5d7 calc(48% - 9px),#ebe5d7 calc(48% + 9px),transparent calc(48% + 9px)),
   linear-gradient(transparent calc(52% - 9px),#ebe5d7 calc(52% - 9px),#ebe5d7 calc(52% + 9px),transparent calc(52% + 9px)),var(--board)}
-.wall-hint{position:absolute;right:16px;bottom:40px;z-index:2;font-size:.95rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
+.wall-hint{position:absolute;left:16px;top:14px;text-shadow:0 0 6px #ddd6c8,0 0 2px #ddd6c8;z-index:2;font-size:.95rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
 .wall.touched .wall-hint{opacity:0}
+.wall.done .wall-hint{opacity:1}
 
 /* ===== Mud-edge dividers ===== */
 .sec{position:relative}
@@ -98,7 +96,7 @@ p{margin:0}
 .row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
 .arrow{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:#e6dfcf;color:var(--green);flex:none;transition:background-color .2s,color .2s,transform .2s}
 .arrow svg{width:20px;height:20px}
-.row:hover .arrow,.row:focus-visible .arrow{background:var(--gold);color:var(--green-950);transform:translateX(3px)}
+.row:focus-visible .arrow{background:var(--gold);color:var(--green-950);transform:translateX(3px)}
 .row:focus-visible .arrow{outline:3px solid var(--gold-deep);outline-offset:3px}
 
 /* ===== How it works ===== */
@@ -107,15 +105,15 @@ p{margin:0}
 .steps{list-style:none;margin:30px 0 0;padding:0;display:grid;gap:26px;counter-reset:s}
 .steps li{display:grid;grid-template-columns:52px 1fr;gap:16px;align-items:start}
 .steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;width:52px;height:52px;border-radius:50%;background:var(--gold);color:var(--green-950);font-weight:900;font-size:1.4rem}
-.steps h3{font-size:1.3rem;color:var(--cream);margin-top:4px}
+.steps h3{font-size:1.3rem;line-height:1.1;color:var(--cream);margin-top:4px}
 .steps p{margin-top:6px;color:var(--cream-soft);max-width:40ch}
 
 /* ===== Work ===== */
 .work{padding:72px 0 78px;background:var(--mud)}
 .work h2{color:var(--green)}
-.board{display:grid;grid-template-columns:1fr 1fr;gap:26px 18px;margin-top:34px}
+.board{display:grid;grid-template-columns:1fr 1fr;gap:40px 18px;margin-top:34px}
 .pin:first-child{grid-column:1/-1}
-.pin:first-child video{aspect-ratio:4/5}
+.pin:first-child img{aspect-ratio:4/5}
 .pin{position:relative;margin:0;background:#fff;padding:8px;border-radius:6px;box-shadow:0 14px 30px -12px rgba(22,39,31,.35),0 2px 6px rgba(22,39,31,.12)}
 .pin video,.pin img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:3px;background:var(--board);-webkit-user-drag:none;user-select:none}
 .pin:nth-child(1){transform:rotate(-1.2deg)}
@@ -130,13 +128,12 @@ p{margin:0}
 .tape.b{top:-10px;right:-18px;transform:rotate(36deg)}
 .fb-more{display:flex;align-items:center;gap:14px;margin-top:40px;padding:18px 20px;border-radius:var(--radius);background:var(--green);color:var(--cream);text-decoration:none;
   font-weight:800;font-size:1.15rem;line-height:1.2;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
-.fb-more:hover{background:var(--green-700)}
 .fb-more .fb{width:44px;height:44px;flex:none;border-radius:50%;background:var(--gold);color:var(--green-950);display:grid;place-items:center}
 .fb-more .fb svg{width:24px;height:24px}
 .fb-more .go{margin-left:auto;width:26px;height:26px;color:var(--gold);flex:none}
 
 /* ===== Area ===== */
-.area{padding:68px 0 70px}
+.area{padding:56px 0 60px}
 .area h2{color:var(--cream)}
 .area p{margin-top:14px;font-size:clamp(1.3rem,5.5vw,1.8rem);font-weight:800;color:var(--gold);line-height:1.25;max-width:24ch}
 
@@ -147,33 +144,30 @@ p{margin:0}
 form{margin-top:28px;display:grid;gap:22px;max-width:640px}
 label,.legend{display:block;font-weight:800;margin-bottom:8px}
 .opt{font-weight:500;color:var(--ink-soft)}
-input[type=text],textarea{width:100%;min-height:54px;padding:13px 14px;border:2px solid #cfc6b2;border-radius:10px;background:#fffdf8;color:var(--ink);font:400 17px/1.4 var(--font);transition:border-color .15s,box-shadow .15s}
+input[type=text],textarea{width:100%;min-height:54px;padding:13px 14px;border:2px solid #8a8069;border-radius:10px;background:#fffdf8;color:var(--ink);font:400 17px/1.4 var(--font);transition:border-color .15s,box-shadow .15s}
 textarea{min-height:110px;resize:vertical}
-input[type=text]:hover,textarea:hover{border-color:var(--gold-deep)}
 input[type=text]:focus,textarea:focus{outline:none;border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(168,119,26,.28)}
 fieldset{border:0;margin:0;padding:0;min-width:0}
 .chips{display:flex;flex-wrap:wrap;gap:10px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;width:1px;height:1px}
-.chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:2px solid #cfc6b2;border-radius:10px;background:#fffdf8;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
-.chip span:hover{border-color:var(--gold-deep)}
+.chip span{display:inline-flex;align-items:center;min-height:48px;padding:0 18px;border:2px solid #8a8069;border-radius:10px;background:#fffdf8;font-weight:700;cursor:pointer;transition:border-color .15s,background-color .15s,color .15s}
 .chip input:focus-visible+span{border-color:var(--gold-deep);box-shadow:0 0 0 3px rgba(168,119,26,.28)}
 .chip input:checked+span{background:var(--green);border-color:var(--green);color:var(--cream)}
-.chip input:checked+span:hover{border-color:var(--gold-deep)}
 .err{display:none;margin-top:8px;color:#9b2c1c;font-weight:700;font-size:.95rem}
 .invalid .err{display:block}
 .invalid input[type=text]{border-color:#b3412c}
 form .btn{width:100%}
-form .btn:hover,form .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
+form .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
 .sent{display:none;margin-top:6px;padding:20px;border-radius:var(--radius);background:#fffdf8;border:2px solid #ddd6c6}
 .sent.show{display:block}
 .sent h3{font-size:1.25rem;color:var(--green)}
-.sent .msg{margin:12px 0 0;padding:14px;border-radius:10px;background:var(--mud);white-space:pre-wrap;font:400 16px/1.5 var(--font);-webkit-user-select:text;user-select:text}
+.sent .msg{overflow-wrap:anywhere;-webkit-touch-callout:default;margin:12px 0 0;padding:14px;border-radius:10px;background:var(--mud);white-space:pre-wrap;font:400 16px/1.5 var(--font);-webkit-user-select:text;user-select:text}
 .sent .note{margin-top:12px;color:var(--ink-soft)}
 .sent .btn{width:100%;margin-top:14px}
-.sent .btn:hover,.sent .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
-.copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #cfc6b2;border-radius:10px;background:transparent;font:800 .95rem var(--font);color:var(--ink);cursor:pointer}
-.copy:hover,.copy:focus-visible{border-color:var(--gold-deep);outline:none}
+.sent .btn:focus-visible{outline:3px solid var(--gold-deep);outline-offset:2px}
+.copy{margin-top:10px;width:100%;min-height:48px;border:2px solid #8a8069;border-radius:10px;background:transparent;font:800 .95rem var(--font);color:var(--ink);cursor:pointer}
+.copy:focus-visible{border-color:var(--gold-deep);outline:none}
 
 /* ===== Footer ===== */
 footer{position:relative;background:var(--green-950);color:var(--cream);padding:70px 0 40px;text-align:center}
@@ -182,9 +176,23 @@ footer .tag{margin-top:20px;font-weight:900;text-transform:uppercase;font-size:c
 footer .name{margin-top:10px;color:var(--cream-soft)}
 footer .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:22px}
 footer .links a{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-weight:800;text-decoration:none}
-footer .links a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
 footer .links .icon{color:var(--gold)}
 footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
+
+/* ===== Hover extras (mouse only, so taps don't leave accents stuck on) ===== */
+@media (hover:hover){
+  .btn-gold:hover{background:#ebbd4f;border-color:#ebbd4f}
+  .btn-line:hover{background:rgba(222,172,57,.14)}
+  .btn-green:hover{background:var(--green-700);border-color:var(--green-700)}
+  .top-msg:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+  .row:hover .arrow{background:var(--gold);color:var(--green-950);transform:translateX(3px)}
+  .fb-more:hover{background:var(--green-700)}
+  .chip span:hover,.chip input:checked+span:hover{border-color:var(--gold-deep)}
+  input[type=text]:hover,textarea:hover{border-color:var(--gold-deep)}
+  form .btn:hover,.sent .btn:hover{outline:3px solid var(--gold-deep);outline-offset:2px}
+  .copy:hover{border-color:var(--gold-deep)}
+  footer .links a:hover{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
+}
 
 /* ===== Larger screens ===== */
 @media (min-width:430px){
@@ -197,18 +205,17 @@ footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
   .wall{height:340px}
   .board{grid-template-columns:repeat(3,1fr);gap:34px}
   .pin:first-child{grid-column:auto}
-  .pin:first-child video{aspect-ratio:3/4}
+  .pin:first-child img{aspect-ratio:3/4}
   .steps{grid-template-columns:repeat(3,1fr);gap:28px}
   .steps li{grid-template-columns:1fr;gap:14px}
 }
 @media (min-width:1024px){
   .hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);grid-template-rows:auto 1fr;min-height:min(760px,100svh)}
-  .hero .top{grid-column:1/-1}
-  .hero-copy{align-self:center;padding:24px 40px 90px 56px}
+  .hero .top{grid-column:1/-1;padding-inline:max(32px,calc((100vw - 1160px)/2 + 32px))}
+  .hero-copy{align-self:center;padding:24px 40px 90px max(56px,calc((100vw - 1160px)/2 + 32px))}
   .wall{height:auto;min-height:540px;margin:0 0 0 0;border-top-left-radius:22px}
   .promise{font-size:1.25rem}
-  .services .wrap,.estimate .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
-  .rows{margin-top:6px}
+  .estimate .wrap{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:64px;align-items:start}
   form{margin-top:0}
   .estimate .lede{margin-bottom:0}
   .fb-more{max-width:560px}
@@ -218,10 +225,12 @@ footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
   .hero-copy{padding-top:6px;padding-bottom:18px}
   .promise{margin-top:10px}
   .hero-actions{margin-top:14px}
+  .wall{height:220px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
-  *{transition:none!important}
+  .btn,.arrow{transition-property:background-color,color,border-color!important}
+  .btn:active,.row:hover .arrow,.row:focus-visible .arrow{transform:none!important}
 }
 </style>
 </head>
@@ -268,7 +277,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
         <li><a class="row" href="#estimate" data-service="Hanging">Hanging<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
         <li><a class="row" href="#estimate" data-service="Taping">Taping<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
         <li><a class="row" href="#estimate" data-service="Finishing">Finishing<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
-        <li><a class="row" href="#estimate" data-service="Renovation">Renovations<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
+        <li><a class="row" href="#estimate" data-service="Renovations">Renovations<span class="arrow"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></svg></span></a></li>
       </ul>
     </div>
   </section>
@@ -280,7 +289,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       <ol class="steps">
         <li><div><h3>Tell me about the job</h3><p>Send me a message with the room and what needs doing. Photos help.</p></div></li>
         <li><div><h3>Free estimate</h3><p>I look it over and give you a straight price before any work starts.</p></div></li>
-        <li><div><h3>Hung, taped, finished</h3><p>I do the job right the first time and leave it ready for paint.</p></div></li>
+        <li><div><h3>Hung, taped, finished</h3><p>Every seam taped, coated and sanded smooth, left ready for your paint.</p></div></li>
       </ol>
     </div>
   </section>
@@ -291,13 +300,13 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       <h2>My work</h2>
       <div class="board">
         <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
-          <video src="img/walkthrough.mp4" poster="img/poster.webp" muted loop playsinline preload="none" aria-label="Walking past a wall with taped and mudded seams" data-lazyvideo></video>
-        </figure>
-        <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
           <img src="img/wall.webp" width="720" height="1280" loading="lazy" decoding="async" draggable="false" alt="A full wall with every seam taped and coated in joint compound">
         </figure>
         <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
-          <img src="img/doorway.webp" width="720" height="1280" loading="lazy" decoding="async" draggable="false" alt="New drywall around a doorway, seams taped and mudded">
+          <video src="img/walkthrough.mp4" poster="img/poster.webp" muted loop playsinline preload="none" aria-label="Walking past a wall with taped and mudded seams" data-lazyvideo></video>
+        </figure>
+        <figure class="pin"><span class="tape a"></span><span class="tape b"></span>
+          <img src="img/corner.webp" width="720" height="1280" loading="lazy" decoding="async" draggable="false" alt="Taped and coated seams running into the corner under the crown molding">
         </figure>
       </div>
       <a class="fb-more" href="https://www.facebook.com/profile.php?id=61594566614771">
@@ -321,18 +330,18 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     <div class="wrap">
       <div>
         <h2>Free estimate</h2>
-        <p class="lede">Answer a few questions and I'll have what I need to get back to you. Your answers become a message you send me on Facebook Messenger.</p>
+        <p class="lede">Your answers turn into a message you send me on Facebook Messenger.</p>
       </div>
       <form id="estimateForm" novalidate>
         <div class="field" id="f-name">
           <label for="name">Your name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required>
-          <p class="err">Add your name so I know who I'm talking to.</p>
+          <input type="text" id="name" name="name" autocomplete="name" autocapitalize="words" enterkeyhint="next" maxlength="80" required aria-describedby="err-name">
+          <p class="err" id="err-name">Add your name so I know who I'm talking to.</p>
         </div>
         <div class="field" id="f-town">
           <label for="town">Your town</label>
-          <input type="text" id="town" name="town" autocomplete="address-level2" required>
-          <p class="err">Add your town so I know where the job is.</p>
+          <input type="text" id="town" name="town" autocomplete="address-level2" autocapitalize="words" enterkeyhint="next" maxlength="80" required aria-describedby="err-town">
+          <p class="err" id="err-town">Add your town so I know where the job is.</p>
         </div>
         <fieldset>
           <legend class="legend">What needs doing? <span class="opt">(pick any)</span></legend>
@@ -340,12 +349,12 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
             <label class="chip"><input type="checkbox" name="svc" value="Hanging"><span>Hanging</span></label>
             <label class="chip"><input type="checkbox" name="svc" value="Taping"><span>Taping</span></label>
             <label class="chip"><input type="checkbox" name="svc" value="Finishing"><span>Finishing</span></label>
-            <label class="chip"><input type="checkbox" name="svc" value="Renovation"><span>Renovation</span></label>
+            <label class="chip"><input type="checkbox" name="svc" value="Renovations"><span>Renovations</span></label>
           </div>
         </fieldset>
         <div class="field">
           <label for="details">The room and the job <span class="opt">(optional)</span></label>
-          <textarea id="details" name="details" placeholder="e.g. basement, two new walls and a ceiling"></textarea>
+          <textarea id="details" name="details" maxlength="600" placeholder="e.g. basement, two new walls and a ceiling"></textarea>
         </div>
         <fieldset>
           <legend class="legend">When?</legend>
@@ -356,11 +365,11 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
           </div>
         </fieldset>
         <button class="btn btn-green" type="submit">Write my message</button>
-        <div class="sent" id="sent" aria-live="polite" tabindex="-1">
-          <h3>Your message is ready</h3>
+        <div class="sent" id="sent" tabindex="-1" aria-labelledby="sentTitle">
+          <h3 id="sentTitle">Your message is ready</h3>
           <p class="msg" id="msgText"></p>
           <button class="copy" type="button" id="copyBtn">Copy message</button>
-          <p class="note" id="copyNote">Open Messenger, then paste it into the chat.</p>
+          <p class="note" id="copyNote" aria-live="polite">Open Messenger, paste it into the chat, and send a photo of the room if you can.</p>
           <a class="btn btn-gold" href="https://m.me/61594566614771" id="openMsg">Open Messenger</a>
         </div>
       </form>
@@ -373,12 +382,11 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   <div class="wrap">
     <img class="seal" src="img/logo.webp" width="150" height="150" loading="lazy" alt="Green Mountain Renovations logo">
     <p class="tag">Where quality matters</p>
-    <p class="name">Green Mountain Renovations · Drywall and renovations</p>
+    <p class="name">Green Mountain Renovations<br>Drywall and renovations</p>
     <div class="links">
       <a href="https://www.facebook.com/profile.php?id=61594566614771"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.87.25-1.46 1.5-1.46h1.6V4.46A21 21 0 0 0 14.27 4.3c-2.3 0-3.87 1.4-3.87 3.98v2.22H7.8v3h2.6V21h3.1Z"/></svg>Facebook</a>
       <a href="https://m.me/61594566614771"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2C6.36 2 2 6.13 2 11.7c0 2.91 1.2 5.42 3.14 7.16.16.15.26.35.27.57l.05 1.78a.8.8 0 0 0 1.12.71l1.98-.87a.8.8 0 0 1 .53-.04c.91.25 1.88.39 2.91.39 5.64 0 10-4.13 10-9.7S17.64 2 12 2Zm6 7.46-2.94 4.66a1.5 1.5 0 0 1-2.17.4l-2.34-1.75a.6.6 0 0 0-.72 0l-3.16 2.4c-.42.32-.97-.18-.69-.63l2.94-4.66a1.5 1.5 0 0 1 2.17-.4l2.34 1.75a.6.6 0 0 0 .72 0l3.16-2.4c.42-.32.97.18.69.63Z"/></svg>Messenger</a>
     </div>
-    <p class="area-line">Serving Kingston and the surrounding area.</p>
   </div>
 </footer>
 
@@ -399,11 +407,13 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   var phone = matchMedia('(max-width: 759px)').matches;
   var dpr = Math.min(window.devicePixelRatio || 1, phone ? 1.5 : 2);
+  var REWARD_PX = 600;     // after this much dragging, the hint says the wall's ready for paint
+  var dragged = 0, rewarded = false, hint = wall.querySelector('.wall-hint');
   var W = 0, H = 0, base, mud, mctx;
   var knife = {x:0, y:0, px:0, py:0, ang:-0.9};
   var BIAS = {x:.55, y:-.83};  // a right hand holds the handle up and to the right
   var pointer = {on:false, cx:0, cy:0, last:0};
-  var t0 = performance.now(), visible = true, raf = 0, n = 0, lifted = false;
+  var t0 = performance.now(), visible = true, raf = 0, n = 0, lifted = false, onScreen = true;
   var LIFT_PX = 26;        // auto knife only lays mud when it's this close to its route
 
   function seeded(s){ return function(){ s = (s*16807) % 2147483647; return s/2147483647; }; }
@@ -532,18 +542,22 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     if(visible && !reduce) raf = requestAnimationFrame(frame);
   }
 
-  function setPointer(x,y){ pointer.on = true; pointer.cx = x; pointer.cy = y; pointer.last = performance.now(); wall.classList.add('touched'); }
+  function setPointer(x,y){
+    if(pointer.on){ dragged += Math.hypot(x - pointer.cx, y - pointer.cy);
+      if(!rewarded && dragged > REWARD_PX){ rewarded = true; hint.textContent = 'Ready for paint.'; wall.classList.add('done'); setTimeout(function(){ wall.classList.remove('done'); }, 2200); } }
+    pointer.on = true; pointer.cx = x; pointer.cy = y; pointer.last = performance.now(); wall.classList.add('touched'); }
   wall.addEventListener('pointermove', function(e){ if(e.pointerType === 'mouse' || e.buttons) setPointer(e.clientX, e.clientY); });
   wall.addEventListener('pointerdown', function(e){ setPointer(e.clientX, e.clientY); });
   wall.addEventListener('touchstart', function(e){ var p = e.touches[0]; setPointer(p.clientX, p.clientY); }, {passive:true});
   wall.addEventListener('touchmove', function(e){ var p = e.touches[0]; setPointer(p.clientX, p.clientY); }, {passive:true});
   wall.addEventListener('pointerleave', function(e){ if(e.pointerType === 'mouse') pointer.last = 0; });
 
+  document.addEventListener('visibilitychange', function(){ visible = !document.hidden && onScreen; if(visible && !raf && !reduce) raf = requestAnimationFrame(frame); });
   size();
   wall.querySelector('.fallback').style.display = 'none';
   window.addEventListener('resize', function(){ size(); if(reduce) frame(performance.now()); });
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(es){ visible = es[0].isIntersecting; if(visible && !raf && !reduce) raf = requestAnimationFrame(frame); }).observe(wall);
+    new IntersectionObserver(function(es){ onScreen = es[0].isIntersecting; visible = onScreen && !document.hidden; if(visible && !raf && !reduce) raf = requestAnimationFrame(frame); }).observe(wall);
   }
   if(reduce){
     // a still picture: one seam already finished, the knife resting on the other
@@ -608,14 +622,16 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   var sent = document.getElementById('sent'), out = document.getElementById('msgText');
   var copyBtn = document.getElementById('copyBtn'), note = document.getElementById('copyNote');
   function val(id){ return document.getElementById(id).value.trim(); }
-  function check(id){ var ok = !!val(id); document.getElementById('f-'+id).classList.toggle('invalid', !ok); return ok; }
+  function check(id){ var ok = !!val(id); document.getElementById('f-'+id).classList.toggle('invalid', !ok); document.getElementById(id).setAttribute('aria-invalid', String(!ok)); return ok; }
   ['name','town'].forEach(function(id){ document.getElementById(id).addEventListener('input', function(){ if(document.getElementById('f-'+id).classList.contains('invalid')) check(id); }); });
   function copy(text){
     if(navigator.clipboard && window.isSecureContext){ return navigator.clipboard.writeText(text).then(function(){ return true; }, function(){ return false; }); }
     return Promise.resolve(false);
   }
+  var submit = form.querySelector('[type=submit]');
+  form.addEventListener('input', function(e){ if(sent.classList.contains('show') && !sent.contains(e.target)) submit.textContent = 'Update my message'; });
   form.addEventListener('submit', function(e){
-    e.preventDefault();
+    e.preventDefault(); submit.textContent = 'Write my message';
     var okName = check('name'), okTown = check('town');
     if(!okName || !okTown){ document.getElementById(okName ? 'town' : 'name').focus(); return; }
     var svc = [].map.call(form.querySelectorAll('input[name=svc]:checked'), function(i){ return i.value.toLowerCase(); });
@@ -628,14 +644,14 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     out.textContent = text; sent.classList.add('show'); sent.focus({preventScroll:true});
     sent.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'center'});
     copy(text).then(function(ok){
-      note.textContent = ok ? 'Copied. Open Messenger and paste it into the chat.' : 'Press and hold the message to copy it, then open Messenger and paste it into the chat.';
+      note.textContent = ok ? 'Copied. Open Messenger, paste it into the chat, and send a photo of the room if you can.' : 'Press and hold the message to copy it, then open Messenger, paste it into the chat, and send a photo of the room if you can.';
     });
   });
   copyBtn.addEventListener('click', function(){
     copy(out.textContent).then(function(ok){
-      copyBtn.textContent = ok ? 'Copied' : 'Copy blocked here';
-      if(!ok) note.textContent = 'Press and hold the message to copy it, then open Messenger and paste it into the chat.';
-      setTimeout(function(){ copyBtn.textContent = 'Copy message'; }, 2200);
+      if(ok){ copyBtn.textContent = 'Copied'; setTimeout(function(){ copyBtn.textContent = 'Copy message'; }, 2200); return; }
+      copyBtn.textContent = 'Press and hold the message to copy';
+      note.textContent = 'Press and hold the message to copy it, then open Messenger, paste it into the chat, and send a photo of the room if you can.';
     });
   });
 })();
