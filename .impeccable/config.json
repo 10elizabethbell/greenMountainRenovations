@@ -1,0 +1,47 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-19T05:35:47.932Z",
+        "reason": "pitch-site house style (ellie-taste.md §2): system font stack on every pitch site"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "rgb(243, 239, 230)",
+        "createdAt": "2026-10-19T05:35:48.000Z",
+        "reason": "committed world: dry joint-compound white is the page ground (direction contract)"
+      },
+      {
+        "rule": "clipped-overflow-container",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T05:35:48.070Z",
+        "reason": "html/body overflow-x clip only stops sideways scroll on phones; no popovers on the page"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T05:35:48.138Z",
+        "reason": "wall canvas fills its box by design; service rows carry their own padding under the list rule"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T05:35:48.206Z",
+        "reason": "flagged text is the uppercase logo lockup in the header, not body copy"
+      }
+    ]
+  }
+}

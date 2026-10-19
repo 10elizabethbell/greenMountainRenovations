@@ -28,13 +28,13 @@
   --ink:#16271f;         /* text on mud */
   --ink-soft:#3c4f45;
   --cream:#f6f1e4;       /* text on green */
-  --cream-soft:#cddbd2;
+  --cream-soft:#e6e0c8;
   --radius:14px;
   --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth}
-body{margin:0;background:var(--mud);color:var(--ink);font:400 17px/1.55 var(--font);overflow-x:hidden}
+html{-webkit-text-size-adjust:100%;overscroll-behavior-y:none;scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
+body{margin:0;background:var(--mud);color:var(--ink);font:400 17px/1.55 var(--font);overflow-x:hidden;overflow-x:clip}
 img,video{display:block;max-width:100%}
 a{color:inherit}
 ::selection{background:var(--gold);color:var(--green-950)}
@@ -63,7 +63,7 @@ p{margin:0}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
 .brand img{width:46px;height:46px;border-radius:50%;background:#fff;padding:5px;flex:none;object-fit:contain}
 .brand span{font-weight:900;text-transform:uppercase;line-height:1;letter-spacing:.01em;font-size:.92rem}
-.brand small{display:block;color:var(--gold);font-weight:700;font-size:.66rem;letter-spacing:.12em;margin-top:4px}
+.brand small{display:block;color:var(--gold);font-weight:700;font-size:.72rem;letter-spacing:.1em;margin-top:4px}
 .top-msg{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 4px;color:var(--cream);font-weight:800;font-size:.9rem;text-decoration:none;white-space:nowrap}
 .top-msg .icon{color:var(--gold)}
 .top-msg:hover span{text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--gold)}
@@ -81,7 +81,7 @@ p{margin:0}
 .wall .fallback{position:absolute;inset:0;background:
   linear-gradient(90deg,transparent calc(48% - 9px),#ebe5d7 calc(48% - 9px),#ebe5d7 calc(48% + 9px),transparent calc(48% + 9px)),
   linear-gradient(transparent calc(52% - 9px),#ebe5d7 calc(52% - 9px),#ebe5d7 calc(52% + 9px),transparent calc(52% + 9px)),var(--board)}
-.wall-hint{position:absolute;right:16px;bottom:40px;z-index:2;font-size:.85rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
+.wall-hint{position:absolute;right:16px;bottom:40px;z-index:2;font-size:.95rem;font-weight:700;color:#4d473b;pointer-events:none;transition:opacity .5s}
 .wall.touched .wall-hint{opacity:0}
 
 /* ===== Mud-edge dividers ===== */
@@ -129,7 +129,7 @@ p{margin:0}
 .tape.a{top:-10px;left:-18px;transform:rotate(-38deg)}
 .tape.b{top:-10px;right:-18px;transform:rotate(36deg)}
 .fb-more{display:flex;align-items:center;gap:14px;margin-top:40px;padding:18px 20px;border-radius:var(--radius);background:var(--green);color:var(--cream);text-decoration:none;
-  font-weight:900;text-transform:uppercase;font-size:1.08rem;line-height:1.15;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
+  font-weight:800;font-size:1.15rem;line-height:1.2;box-shadow:0 14px 28px -14px rgba(15,64,45,.7);transition:background-color .2s}
 .fb-more:hover{background:var(--green-700)}
 .fb-more .fb{width:44px;height:44px;flex:none;border-radius:50%;background:var(--gold);color:var(--green-950);display:grid;place-items:center}
 .fb-more .fb svg{width:24px;height:24px}
@@ -212,6 +212,12 @@ footer .area-line{margin-top:18px;color:var(--cream-soft);font-size:.92rem}
   form{margin-top:0}
   .estimate .lede{margin-bottom:0}
   .fb-more{max-width:560px}
+}
+@media (max-height:500px) and (orientation:landscape){
+  .hero h1{font-size:clamp(2.4rem,9vh,3.4rem)}
+  .hero-copy{padding-top:6px;padding-bottom:18px}
+  .promise{margin-top:10px}
+  .hero-actions{margin-top:14px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -397,7 +403,8 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
   var knife = {x:0, y:0, px:0, py:0, ang:-0.9};
   var BIAS = {x:.55, y:-.83};  // a right hand holds the handle up and to the right
   var pointer = {on:false, cx:0, cy:0, last:0};
-  var t0 = performance.now(), visible = true, raf = 0, n = 0;
+  var t0 = performance.now(), visible = true, raf = 0, n = 0, lifted = false;
+  var LIFT_PX = 26;        // auto knife only lays mud when it's this close to its route
 
   function seeded(s){ return function(){ s = (s*16807) % 2147483647; return s/2147483647; }; }
 
@@ -474,11 +481,11 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       mctx.beginPath(); mctx.moveTo(x0+nx*o, y0+ny*o); mctx.lineTo(x1+nx*o, y1+ny*o); mctx.stroke(); }
   }
 
-  function drawKnife(x,y,ang){
-    ctx.save(); ctx.translate(x,y); ctx.rotate(ang);
+  function drawKnife(x,y,ang,up){
+    ctx.save(); ctx.translate(x,y); ctx.rotate(ang); if(up) ctx.scale(1.06,1.06);
     // blade: wide edge on the wall, narrowing to the ferrule
     var h = KNIFE/2;
-    ctx.shadowColor = 'rgba(30,25,15,.35)'; ctx.shadowBlur = 14; ctx.shadowOffsetX = 6; ctx.shadowOffsetY = 10;
+    ctx.shadowColor = 'rgba(30,25,15,.35)'; ctx.shadowBlur = up ? 22 : 14; ctx.shadowOffsetX = up ? 12 : 6; ctx.shadowOffsetY = up ? 18 : 10;
     var g = ctx.createLinearGradient(0,-h,0,h); g.addColorStop(0,'#f1cd6c'); g.addColorStop(.5,'#deac39'); g.addColorStop(1,'#a8771a');
     ctx.fillStyle = g; ctx.beginPath(); ctx.moveTo(-3,-h); ctx.lineTo(3,-h); ctx.lineTo(KNIFE*.62,-h*.36); ctx.lineTo(KNIFE*.62,h*.36); ctx.lineTo(3,h); ctx.lineTo(-3,h); ctx.closePath(); ctx.fill();
     ctx.shadowColor = 'transparent';
@@ -496,11 +503,14 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     raf = 0;
     var t = (now - t0)/1000, target;
     if(pointer.on && now - pointer.last < IDLE_MS){
+      lifted = false;
       var r = cv.getBoundingClientRect();     // read every frame: the page scrolls under the finger
       target = {x: pointer.cx - r.left, y: pointer.cy - r.top};
       knife.x += (target.x - knife.x)*.55; knife.y += (target.y - knife.y)*.55;
     } else {
       pointer.on = false; target = autoTarget(t);
+      // far from the seam it's heading for, the knife is off the wall moving to the next pass
+      lifted = Math.hypot(target.x - knife.x, target.y - knife.y) > LIFT_PX;
       knife.x += (target.x - knife.x)*.12; knife.y += (target.y - knife.y)*.12;
     }
     // turn the blade so its edge faces the way it's travelling, handle trailing up and to the right
@@ -510,7 +520,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
       var want = Math.atan2(my + BIAS.y*.9, mx + BIAS.x*.9), da = want - knife.ang;
       da = Math.atan2(Math.sin(da), Math.cos(da)); knife.ang += da*.12;
     }
-    skim(knife.px, knife.py, knife.x, knife.y);
+    if(!lifted) skim(knife.px, knife.py, knife.x, knife.y);
     knife.px = knife.x; knife.py = knife.y;
     // wet mud dries toward flat white; old mud slowly sinks back so the job never ends
     mctx.globalCompositeOperation = 'source-atop'; mctx.fillStyle = 'rgba(247,244,237,'+DRY+')'; mctx.fillRect(0,0,W,H);
@@ -518,7 +528,7 @@ FORM: System sans, heavy uppercase display; green/mud alternating sections joine
     mctx.globalCompositeOperation = 'source-over';
     ctx.clearRect(0,0,W,H);
     ctx.drawImage(base,0,0,W,H); ctx.drawImage(mud,0,0,W,H);
-    drawKnife(knife.x, knife.y, knife.ang);
+    drawKnife(knife.x, knife.y, knife.ang, lifted);
     if(visible && !reduce) raf = requestAnimationFrame(frame);
   }
 
