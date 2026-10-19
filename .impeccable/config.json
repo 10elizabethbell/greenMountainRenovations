@@ -59,6 +59,54 @@
         ],
         "createdAt": "2026-10-19T05:47:02.793Z",
         "reason": "detector counts only 14-24px UI sizes; hierarchy is carried by 48-96px uppercase display headings (phone screenshots reviewed)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": ".9rem",
+        "createdAt": "2026-10-19T05:52:24.468Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": ".72rem",
+        "createdAt": "2026-10-19T05:52:24.540Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.4rem",
+        "createdAt": "2026-10-19T05:52:24.606Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.25rem",
+        "createdAt": "2026-10-19T05:52:24.675Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": ".875rem",
+        "createdAt": "2026-10-19T05:52:24.745Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(1.6rem,7vw,2.4rem)",
+        "createdAt": "2026-10-19T05:52:24.813Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "clamp(2.4rem,9vh,3.4rem)",
+        "createdAt": "2026-10-19T05:52:24.880Z",
+        "reason": "shipped build value; DESIGN.md was derived from this file and records it in prose (header lockup, step disc, proof link, footer tagline, landscape hero), not in the frontmatter ramp"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(120,105,80,.2)",
+        "createdAt": "2026-10-19T05:52:24.952Z",
+        "reason": "paper joint-tape centre crease on photo pins, matches the hero tape"
       }
     ]
   }
