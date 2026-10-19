@@ -107,6 +107,24 @@
         "value": "rgba(120,105,80,.2)",
         "createdAt": "2026-10-19T05:52:24.952Z",
         "reason": "paper joint-tape centre crease on photo pins, matches the hero tape"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.6rem",
+        "createdAt": "2026-10-19T05:52:35.489Z",
+        "reason": "fluid endpoint of a shipped clamp recorded in DESIGN.md prose (footer tagline, landscape hero)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "2.4rem",
+        "createdAt": "2026-10-19T05:52:35.556Z",
+        "reason": "fluid endpoint of a shipped clamp recorded in DESIGN.md prose (footer tagline, landscape hero)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "3.4rem",
+        "createdAt": "2026-10-19T05:52:35.624Z",
+        "reason": "fluid endpoint of a shipped clamp recorded in DESIGN.md prose (footer tagline, landscape hero)"
       }
     ]
   }
